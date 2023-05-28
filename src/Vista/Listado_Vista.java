@@ -1,7 +1,7 @@
 package Vista;
 
 import Controlador.Listado_Control;
-import Modelo.Listado_Modelo;
+import Modelo.ListadoCliente_Modelo;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Image;
@@ -15,24 +15,32 @@ import javax.swing.border.EtchedBorder;
 
 
 public class Listado_Vista extends JFrame{
-    public VentanaPrincipal_Vista mp;
+//    public VentanaPrincipal_Vista mp;
+//    public MenuPrincipal_Vista mp;
+    public SubMenuListados_Vista sub;
     public ModeloTabla_Vista mt;
-    public JTable tabla;
+    public JTable tablaC, tablaV, tablaCV;
     public JButton jbVolver;
+    public ListadoCliente_Modelo lsCV, lsC, lsV; 
 
-    public Listado_Vista(VentanaPrincipal_Vista obj) {
+    public Listado_Vista(SubMenuListados_Vista obj) {
         
         super("Listado de personas");
-        mp = obj;
+        sub = obj;
         setSize(600, 500);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
         setLayout(null);
         setResizable(false);
         GUI();
-        Listado_Modelo lpm = new Listado_Modelo(this);
-        lpm.addRegistros();
-        
+//        ListadoCliente_Modelo lpm = new ListadoCliente_Modelo(this);
+//        lpm.addRegistrosCV();
+        /*lsCV = new ListadoCliente_Modelo(this);
+        lsCV.addRegistrosCV();
+        lsC = new ListadoCliente_Modelo(this);
+        lsC.addRegistrosC();
+        lsV = new ListadoCliente_Modelo(this);
+        lsV.addRegistrosV();*/
         setVisible(true);
     }
     
@@ -42,7 +50,9 @@ public class Listado_Vista extends JFrame{
         setIconImage(icn);
         
         titulo();
-        tabla();
+        //tablaCV();
+        //tablaC();
+        //tablaV();
         volver();
     }
     
@@ -57,17 +67,48 @@ public class Listado_Vista extends JFrame{
         add(jl);
     }
     
-    public void tabla(){
+    public void tablaCV(){
+        
         String encabezados[] = {"Apellido", "Nombre", "Telefono", "Cedula", "Modelo", "Placa", "Marca"};
         String datos[][] = {{"", "", "", "", "", "", ""}};
-        
         mt = new ModeloTabla_Vista(datos, encabezados);
-        tabla = new JTable(mt);
+        tablaCV = new JTable(mt);
         
-        tabla.setSelectionBackground(Color.lightGray);
-        tabla.setSelectionForeground(Color.RED);
+        tablaCV.setSelectionBackground(Color.lightGray);
+        tablaCV.setSelectionForeground(Color.RED);
+        tablaCV.setVisible(false);
                 
-        JScrollPane js = new JScrollPane(tabla);
+        JScrollPane js = new JScrollPane(tablaCV);
+        js.setBounds(20, 60, 550, 350);        
+        add(js);
+    }
+    public void tablaC(){
+        
+        String encabezados[] = {"Apellido", "Nombre", "Telefono", "Cedula"};
+        String datos[][] = {{"", "", "", ""}};
+        mt = new ModeloTabla_Vista(datos, encabezados);
+        tablaC = new JTable(mt);
+        
+        tablaC.setSelectionBackground(Color.lightGray);
+        tablaC.setSelectionForeground(Color.RED);
+        tablaC.setVisible(false);
+                
+        JScrollPane js = new JScrollPane(tablaC);
+        js.setBounds(20, 60, 550, 350);        
+        add(js);
+    }
+    public void tablaV(){
+        
+        String encabezados[] = {"Modelo", "Placa", "Marca"};
+        String datos[][] = {{"", "", ""}};
+        mt = new ModeloTabla_Vista(datos, encabezados);
+        tablaV = new JTable(mt);
+        
+        tablaV.setSelectionBackground(Color.lightGray);
+        tablaV.setSelectionForeground(Color.RED);
+        tablaV.setVisible(false);
+                
+        JScrollPane js = new JScrollPane(tablaV);
         js.setBounds(20, 60, 550, 350);        
         add(js);
     }

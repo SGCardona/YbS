@@ -1,6 +1,7 @@
 
 package Vista;
 
+import Controlador.SubMenuListados_Control;
 import java.awt.Color;
 import java.awt.HeadlessException;
 import java.awt.Image;
@@ -28,39 +29,41 @@ public class SubMenuListados_Vista extends JFrame{
         setIconImage(icn);
         setResizable(false);
         
-        listaUsuarios();
-        listaCliente();
-        listaVehiculo();
-        listaClienteVehiculo();
-        salida();
+        SubMenuListados_Control ctrl = new SubMenuListados_Control(this);
+        listaUsuarios(ctrl);
+        listaCliente(ctrl);
+        listaVehiculo(ctrl);
+        listaClienteVehiculo(ctrl);
+        salida(ctrl);
     }
-    public void listaUsuarios(){
+    public void listaUsuarios(SubMenuListados_Control obj){
         jblistaU = new JButton("Lista de Usuarios");
         jblistaU.setBounds(100, 50, 300, 40);
-//        jblista1.addActionListener(obj);
+        jblistaU.addActionListener(obj);
         add(jblistaU);
     }
-    public void listaCliente(){
+    public void listaCliente(SubMenuListados_Control obj){
         jblistaC = new JButton("Lista de Clientes");
         jblistaC.setBounds(100, 100, 300, 40);
-//        jblista1.addActionListener(obj);
+        jblistaC.addActionListener(obj);
         add(jblistaC);
     }
-    public void listaVehiculo(){
+    public void listaVehiculo(SubMenuListados_Control obj){
         jblistaV = new JButton("Lista de Vehiculos");
         jblistaV.setBounds(100, 150, 300, 40);
-//        jblista1.addActionListener(obj);
+        jblistaV.addActionListener(obj);
         add(jblistaV);
     }
-    public void listaClienteVehiculo(){
-        jblistaV = new JButton("Lista de Clientes y Vehiculos");
-        jblistaV.setBounds(100, 200, 300, 40);
-//        jblista1.addActionListener(obj);
-        add(jblistaV);
+    public void listaClienteVehiculo(SubMenuListados_Control obj){
+        jblistaCV = new JButton("Lista de Clientes y Vehiculos");
+        jblistaCV.setBounds(100, 200, 300, 40);
+        jblistaCV.addActionListener(obj);
+        add(jblistaCV);
     }
-    public void salida(){
+    public void salida(SubMenuListados_Control obj){
         jbSalida = new JButton("<");
         jbSalida.setBounds(10, 250, 50, 50);
+        jbSalida.addActionListener(obj);
         add(jbSalida);
     }
     public static void main(String[] args) {

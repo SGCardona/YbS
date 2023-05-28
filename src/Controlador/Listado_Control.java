@@ -22,7 +22,7 @@ public class Listado_Control implements ActionListener{
         if(e.getSource().equals(ls.jbVolver)){
             ls.setVisible(false);
             ls.dispose();
-            ls.mp.setVisible(true);
+            ls.sub.setVisible(true);
         }
     }
     
