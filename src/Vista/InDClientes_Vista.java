@@ -1,7 +1,7 @@
 
 package Vista;
 
-import Controlador.Clientes_Control;
+import Controlador.InDClientes_Control;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Image;
@@ -11,14 +11,14 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
-public class Clientes_Vista extends JFrame{
+public class InDClientes_Vista extends JFrame{
     
     public JTextField jtNombre, jtApellido, jtTelefono, jtCedula, jtPlaca, jtModelo, jtTipo;
     public JLabel jlNombre, jlApellido, jlTelefono, jlCedula, jlPlaca, jlModelo, jlTipo;
     public JButton jbGuardar, jbVolver;
     public VentanaPrincipal_Vista mp;
 
-    public Clientes_Vista(VentanaPrincipal_Vista obj) {
+    public InDClientes_Vista(VentanaPrincipal_Vista obj) {
         super("Clientes");
         mp = obj;
         
@@ -47,7 +47,7 @@ public class Clientes_Vista extends JFrame{
     }
     
     public void Guardar(){
-        Clientes_Control ctrl = new Clientes_Control(this);
+        InDClientes_Control ctrl = new InDClientes_Control(this);
         
         jbGuardar = new JButton("Guardar");
         jbGuardar.setBounds(100, 500, 200, 30);
@@ -146,6 +146,9 @@ public class Clientes_Vista extends JFrame{
         add(jtTipo);
     }
     
+    public static void main(String[] args) {
+        InDClientes_Vista cl = new InDClientes_Vista(null);
+    }
     
     
     

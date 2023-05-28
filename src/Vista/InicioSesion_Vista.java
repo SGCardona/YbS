@@ -1,6 +1,7 @@
 
 package Vista;
 
+import Controlador.InicioSesion_Control;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Image;
@@ -41,24 +42,26 @@ public class InicioSesion_Vista extends JFrame{
         setIconImage(icn);
         setResizable(false);
         
+        
+        InicioSesion_Control ctrl = new InicioSesion_Control(this);
         titulo();
         usuario();
         passw();
-        iniciarSesion();
-        cancelar(); 
+        iniciarSesion(ctrl);
+        cancelar(ctrl); 
     }
     
-    public void iniciarSesion(){
+    public void iniciarSesion(InicioSesion_Control obj){
         jbIniciar = new JButton("Iniciar sesion");
         jbIniciar.setBounds(150, 350, 200, 30);
-//        jbIniciar.addActionListener(obj);
+        jbIniciar.addActionListener(obj);
         add(jbIniciar);
     }
     
-    public void cancelar(){
+    public void cancelar(InicioSesion_Control obj){
         jbCancelar = new JButton("Cancelar");
         jbCancelar.setBounds(150, 390, 200, 30);
-//        jbCancelar.addActionListener(obj);
+        jbCancelar.addActionListener(obj);
         add(jbCancelar);
     }
     

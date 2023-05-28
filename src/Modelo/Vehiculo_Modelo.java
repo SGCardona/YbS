@@ -2,13 +2,13 @@
 package Modelo;
 
 import Entidades.Vehiculo_Entidad;
-import Vista.Clientes_Vista;
+import Vista.InDClientes_Vista;
 
 public class Vehiculo_Modelo {
     
-    public Clientes_Vista clv;
+    public InDClientes_Vista clv;
 
-    public Vehiculo_Modelo(Clientes_Vista obj) {
+    public Vehiculo_Modelo(InDClientes_Vista obj) {
     
         clv = obj;
     

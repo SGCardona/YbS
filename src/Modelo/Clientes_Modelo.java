@@ -2,14 +2,14 @@
 package Modelo;
 
 import Entidades.Clientes_Entidad;
-import Vista.Clientes_Vista;
+import Vista.InDClientes_Vista;
 
 
 public class Clientes_Modelo {
     
-    public Clientes_Vista cl;
+    public InDClientes_Vista cl;
 
-    public Clientes_Modelo(Clientes_Vista obj) {
+    public Clientes_Modelo(InDClientes_Vista obj) {
         cl = obj;
     }
     

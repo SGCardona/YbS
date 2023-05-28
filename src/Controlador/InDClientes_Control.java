@@ -3,16 +3,16 @@ package Controlador;
 
 import Modelo.Clientes_Modelo;
 import Modelo.Vehiculo_Modelo;
-import Vista.Clientes_Vista;
+import Vista.InDClientes_Vista;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
-public class Clientes_Control  implements ActionListener{
+public class InDClientes_Control  implements ActionListener{
     
-    public Clientes_Vista cl;
+    public InDClientes_Vista cl;
 
-    public Clientes_Control(Clientes_Vista cl) {
+    public InDClientes_Control(InDClientes_Vista cl) {
         this.cl = cl;
     }
 
