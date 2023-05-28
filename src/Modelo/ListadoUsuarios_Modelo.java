@@ -19,7 +19,7 @@ public class ListadoUsuarios_Modelo {
         
         //System.out.println("Personas");
         for (int i = 0; i < lsv.mp.listaUsuarios.size(); i++) {
-            Usuarios_Entidad obj = lsv.mp.listaUsuarios.get(i);
+            String obj = lsv.mp.listaUsuarios.get(i);
             /*Object datos[] = new Object[4];
             datos[0] = obj.getApellido();
             datos[1] = obj.getNombre();
