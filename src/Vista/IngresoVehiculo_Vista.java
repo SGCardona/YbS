@@ -1,7 +1,8 @@
 
 package Vista;
 
-import Controlador.InDClientes_Control;
+import Controlador.InDVehiculo_Control;
+import Controlador.IngresoVehiculo_Control;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Image;
@@ -9,16 +10,20 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class InDClientes_Vista extends JFrame{
+public class IngresoVehiculo_Vista extends JFrame{
     
     public JTextField jtNombre, jtApellido, jtTelefono, jtCedula, jtPlaca, jtModelo, jtTipo;
     public JLabel jlNombre, jlApellido, jlTelefono, jlCedula, jlPlaca, jlModelo, jlTipo;
-    public JButton jbGuardar, jbVolver;
+    public JButton jbGuardar, jbVolver, jbEntrada, jbSalida;
+    //public JPanel jpDatosCliente, jpDatosVehiculo;
+    public InDCliente_Vista ind;
+    public InDVehiculo_Vista indv;
     public VentanaPrincipal_Vista mp;
 
-    public InDClientes_Vista(VentanaPrincipal_Vista obj) {
+    public IngresoVehiculo_Vista(VentanaPrincipal_Vista obj) {
         super("Clientes");
         mp = obj;
         
@@ -35,19 +40,18 @@ public class InDClientes_Vista extends JFrame{
         Image icn = new ImageIcon(getClass().getResource("../Imagenes/Car_Icon.png")).getImage();
         setIconImage(icn);
         
-        nombre();
+        /*nombre();
         apellido();
         telefono();
         cedula();
         placa();
         modelo();
-        tipo();
-        Guardar();
-        
+        tipo();*/
+        GuardarEntradaSalida();
     }
     
-    public void Guardar(){
-        InDClientes_Control ctrl = new InDClientes_Control(this);
+    public void GuardarEntradaSalida(){
+        IngresoVehiculo_Control ctrl = new IngresoVehiculo_Control(this);
         
         jbGuardar = new JButton("Guardar");
         jbGuardar.setBounds(100, 500, 200, 30);
@@ -59,9 +63,26 @@ public class InDClientes_Vista extends JFrame{
         jbVolver.addActionListener(ctrl);
         add(jbVolver);
         
+        jbEntrada = new JButton("Entrada");
+        jbEntrada.setBounds(20, 10, 150, 30);
+        jbEntrada.addActionListener(ctrl);
+        add(jbEntrada);
+        
+        jbSalida = new JButton("Salida");
+        jbSalida.setBounds(185, 10, 150, 30);
+        jbSalida.addActionListener(ctrl);
+        add(jbSalida);
+        
+        ind = new InDCliente_Vista(this);
+        add(ind);
+        
+        indv = new InDVehiculo_Vista(this);
+        add(indv);
+        
     }
     
-    public void nombre(){
+    
+    /*public void nombre(){
         jlNombre = new JLabel("Nombre");
         jlNombre.setBounds(100, 40, 200, 50);
         jlNombre.setFont(new Font("Tahoma", Font.BOLD, 18));
@@ -147,8 +168,10 @@ public class InDClientes_Vista extends JFrame{
     }
     
     public static void main(String[] args) {
-        InDClientes_Vista cl = new InDClientes_Vista(null);
+        IngresoVehiculo_Vista cl = new IngresoVehiculo_Vista(null);
     }
+    */
+
     
     
     
