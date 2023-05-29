@@ -7,9 +7,14 @@ import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
 
 public class SubMenuConsultas_Vista extends JFrame{
     
+    public JButton consulta;
+    public JLabel jlnumid;
+    public JTextField jtnumid;
     public Consul_Cliente_X_ID id;
     public Consul_Cliente_X_Estado estado;
     public Consul_ListaVehiculos vehi;
@@ -43,6 +48,24 @@ public class SubMenuConsultas_Vista extends JFrame{
         salida(ctrl);
         
     }
+    public void consulta(){
+        consulta = new JButton("Consultar");
+        consulta.setBounds(800, 890, 50, 50);
+        add(consulta);
+    }
+    
+    public void id(){
+        jlnumid = new JLabel("Id:");
+        jlnumid.setBounds(600, 890, 50, 50);
+        add(jlnumid);
+        
+        jtnumid = new JTextField("");
+        jtnumid.setBounds(700, 890, 50, 50);
+        
+        
+        
+    }
+    
     public void cliente_id(SubMenuConsultas_Control obj){
         jbC_Id = new JButton("Cliente x ID");
         jbC_Id.setBounds(50, 50, 200, 30);

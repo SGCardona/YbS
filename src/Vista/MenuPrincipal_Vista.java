@@ -1,6 +1,7 @@
 
 package Vista;
 
+import Controlador.IngresoVehiculo_Control;
 import Controlador.MenuPrincipal_Control;
 import java.awt.Color;
 import java.awt.HeadlessException;
@@ -11,6 +12,7 @@ import javax.swing.JFrame;
 
 public class MenuPrincipal_Vista extends JFrame{
     
+    public IngresoVehiculo_Vista ivv;
     public VentanaPrincipal_Vista vp;
     public JButton jbDatos, jbListados, jbGraficas, jbConsulta, jbAcerca;
 
@@ -23,7 +25,7 @@ public class MenuPrincipal_Vista extends JFrame{
         GUI();
         setVisible(true);
     }
-
+    
     public void GUI(){
         getContentPane().setBackground(new Color(37, 44, 235));
         Image icn = new ImageIcon(getClass().getResource("../Imagenes/Car_Icon.png")).getImage();
@@ -67,8 +69,9 @@ public class MenuPrincipal_Vista extends JFrame{
         jbAcerca.addActionListener(obj);
         add(jbAcerca);
     }
+    /*
     public static void main(String[] args) {
         MenuPrincipal_Vista mp = new MenuPrincipal_Vista(null);
-    }
+    }*/
     
 }

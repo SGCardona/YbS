@@ -2,12 +2,16 @@
 package Vista;
 import Modelo.ListadoCliente_Modelo;
 import java.awt.Color;
+import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
+import javax.swing.JTextField;
 import javax.swing.border.LineBorder;
 
 public class Consul_Cliente_X_ID extends JPanel{
+    
     
     public SubMenuConsultas_Vista sub;
     public ListadoCliente_Modelo ls;
@@ -27,6 +31,7 @@ public class Consul_Cliente_X_ID extends JPanel{
         //ls = new ListadoCliente_Modelo(this);
         //ls.addRegistrosC();
     }
+    
     public void tablaC(){
         
         String encabezados[] = {"Cedula", "Apellido", "Nombre", "Telefono"};

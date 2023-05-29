@@ -2,13 +2,13 @@
 package Modelo;
 
 import Entidades.Vehiculo_Entidad;
-import Vista.InDClientes_Vista;
+import Vista.IngresoVehiculo_Vista;
 
 public class Vehiculo_Modelo implements DatosConexion{
     
-    public InDClientes_Vista clv;
+    public IngresoVehiculo_Vista clv;
 
-    public Vehiculo_Modelo(InDClientes_Vista obj) {
+    public Vehiculo_Modelo(IngresoVehiculo_Vista obj) {
         clv = obj;
     }
     
