@@ -13,13 +13,13 @@ public class Vehiculo_Modelo implements DatosConexion{
     }
     
     public void guardar(){  
-        String placa = clv.jtPlaca.getText();
+        /*String placa = clv.jtPlaca.getText();
         String modelo = clv.jtModelo.getText();
         String tipo = clv.jtTipo.getText();
         Vehiculo_Entidad entidad = new Vehiculo_Entidad(modelo, placa, tipo,"","");
-        clv.mp.listadoV.add(entidad);
+        clv.mp.listadoV.add(entidad);/*
         
-        clv.mp.listaVehiculo.add(clv.jtPlaca.getText());
+        /*clv.mp.listaVehiculo.add(clv.jtPlaca.getText());
         clv.mp.listaVehiculo.add(clv.jtModelo.getText());
         clv.mp.listaVehiculo.add(clv.jtTipo.getText());
         clv.mp.listaVehiculo.add("1");
@@ -29,7 +29,7 @@ public class Vehiculo_Modelo implements DatosConexion{
         if(!error){
             con.insertar("vehiculos",clv.mp.listaVehiculo);
             con.desconectar();
-        }
+        }*/
     } 
     
     

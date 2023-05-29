@@ -19,7 +19,7 @@ public class MenuPrincipal_Control implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource().equals(mp.jbDatos)){
-            InDClientes_Vista ini = new InDClientes_Vista(mp.vp);
+            InDClientes_Vista ini = new InDClientes_Vista(mp);
             mp.setVisible(false);
         }
         if(e.getSource().equals(mp.jbListados)){

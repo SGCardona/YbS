@@ -18,23 +18,27 @@ public class Clientes_Modelo {
     }
     
     public void guardar(){
-        String nom = cl.jtNombre.getText();
+        /*String nom = cl.jtNombre.getText();
         String ape = cl.jtApellido.getText();
         String tel = cl.jtTelefono.getText();
         String ced = cl.jtCedula.getText();
         Clientes_Entidad entidad = new Clientes_Entidad(nom, ape, tel, ced);
-        cl.mp.listadoC.add(entidad);
+        cl.mp.listadoC.add(entidad);*/
         
-        cl.mp.listaCliente.add(cl.jtNombre.getText());
-        cl.mp.listaCliente.add(cl.jtApellido.getText());
-        cl.mp.listaCliente.add(cl.jtTelefono.getText());
-        cl.mp.listaCliente.add(cl.jtCedula.getText());
-        cl.mp.listaCliente.add("1");
+        cl.mp.vp.listaClienteVehiculo.add(cl.jtCedula.getText());
+        cl.mp.vp.listaClienteVehiculo.add(cl.jtApellido.getText());
+        cl.mp.vp.listaClienteVehiculo.add(cl.jtNombre.getText());
+        cl.mp.vp.listaClienteVehiculo.add(cl.jtTelefono.getText());
+        cl.mp.vp.listaClienteVehiculo.add(cl.jtTipo.getText());
+        cl.mp.vp.listaClienteVehiculo.add(cl.jtPlaca.getText());
+        cl.mp.vp.listaClienteVehiculo.add(cl.jtModelo.getText());
+        cl.mp.vp.listaClienteVehiculo.add("Ent");
+        cl.mp.vp.listaClienteVehiculo.add("Out");
         
         Conexion con = new Conexion();
         boolean error = con.conectarMySQL(baseDatos, user, login, host);
         if(!error){
-            con.insertar("clientes",cl.mp.listaCliente);
+            con.insertar("clientes",cl.mp.vp.listaClienteVehiculo);
             con.desconectar();
         }
     }

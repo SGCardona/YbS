@@ -5,6 +5,7 @@ import Controlador.VenatanaPrincipal_Control;
 import Entidades.Clientes_Entidad;
 import Entidades.Usuarios_Entidad;
 import Entidades.Vehiculo_Entidad;
+import Modelo.Conexion;
 import java.awt.Color;
 import java.awt.Image;
 import java.util.ArrayList;
@@ -15,8 +16,9 @@ import javax.swing.JFrame;
 public class VentanaPrincipal_Vista extends JFrame{
     
     public JButton jbCrear, jbEntrada, jbSalida;
-    public ArrayList <String> listaCliente = new ArrayList<>();
-    public ArrayList <String> listaVehiculo = new ArrayList<>();
+//    public ArrayList <String> listaCliente = new ArrayList<>();
+    public ArrayList <String> listaClienteVehiculo = new ArrayList<>();
+//    public ArrayList <String> listaVehiculo = new ArrayList<>();
     public ArrayList <String> listaUsuarios = new ArrayList<>();
     public ArrayList <Usuarios_Entidad> listadoU = new ArrayList<>();
     public ArrayList <Clientes_Entidad> listadoC = new ArrayList<>();

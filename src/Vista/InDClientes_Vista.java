@@ -16,9 +16,10 @@ public class InDClientes_Vista extends JFrame{
     public JTextField jtNombre, jtApellido, jtTelefono, jtCedula, jtPlaca, jtModelo, jtTipo;
     public JLabel jlNombre, jlApellido, jlTelefono, jlCedula, jlPlaca, jlModelo, jlTipo;
     public JButton jbGuardar, jbVolver;
-    public VentanaPrincipal_Vista mp;
+//    public VentanaPrincipal_Vista mp;
+    public MenuPrincipal_Vista mp;
 
-    public InDClientes_Vista(VentanaPrincipal_Vista obj) {
+    public InDClientes_Vista(MenuPrincipal_Vista obj) {
         super("Clientes");
         mp = obj;
         
