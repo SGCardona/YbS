@@ -12,20 +12,18 @@ public class IngresoVehiculo_Control  implements ActionListener{
     
     public IngresoVehiculo_Vista cl;
 
-    public IngresoVehiculo_Control(IngresoVehiculo_Vista cl) {
-        this.cl = cl;
+    public IngresoVehiculo_Control(IngresoVehiculo_Vista obj) {
+        cl = obj;
     }
-
     @Override
     public void actionPerformed(ActionEvent e) {
         
         if(e.getSource().equals(cl.jbGuardar)){
             Clientes_Modelo cliente = new Clientes_Modelo(cl);
             cliente.guardar();
-            Vehiculo_Modelo vehiculo = new Vehiculo_Modelo(cl);
-            vehiculo.guardar();
+            //Vehiculo_Modelo vehiculo = new Vehiculo_Modelo(cl);
+            //vehiculo.guardar();
             //cl.jpDatosCliente.jtApellido.setText("");
-            
             cl.ind.jtApellido.setText("");
             cl.ind.jtNombre.setText("");
             cl.ind.jtCedula.setText("");

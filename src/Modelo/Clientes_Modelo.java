@@ -16,15 +16,12 @@ public class Clientes_Modelo {
     public Clientes_Modelo(IngresoVehiculo_Vista obj) {
         cl = obj;
     }
-    
     public void guardar(){
-
         cl.mp.vp.listaClienteVehiculo.add(cl.ind.jtCedula.getText());
         cl.mp.vp.listaClienteVehiculo.add(cl.ind.jtApellido.getText());
         cl.mp.vp.listaClienteVehiculo.add(cl.ind.jtNombre.getText());
         cl.mp.vp.listaClienteVehiculo.add(cl.ind.jtTelefono.getText());
-        String tipo = (String) cl.indv.jcTipo.getSelectedItem();
-        cl.mp.vp.listaClienteVehiculo.add(tipo);
+        cl.mp.vp.listaClienteVehiculo.add((String) cl.indv.jcTipo.getSelectedItem());
         cl.mp.vp.listaClienteVehiculo.add(cl.indv.jtPlaca.getText());
         cl.mp.vp.listaClienteVehiculo.add(cl.indv.jtModelo.getText());
         cl.mp.vp.listaClienteVehiculo.add(cl.indv.jtHoraEntrada.getText());

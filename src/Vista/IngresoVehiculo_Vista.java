@@ -1,10 +1,8 @@
 
 package Vista;
 
-import Controlador.InDVehiculo_Control;
 import Controlador.IngresoVehiculo_Control;
 import java.awt.Color;
-import java.awt.Font;
 import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -31,30 +29,31 @@ public class IngresoVehiculo_Vista extends JFrame{
         getContentPane().setBackground(new Color(37, 44, 235));
         Image icn = new ImageIcon(getClass().getResource("../Imagenes/Car_Icon.png")).getImage();
         setIconImage(icn);
-        GuardarEntradaSalida();
+        IngresoVehiculo_Control ctrl = new IngresoVehiculo_Control(this);
+        GuardarEntradaSalida(ctrl);
     }
     
-    public void GuardarEntradaSalida(){
-        IngresoVehiculo_Control ctrl = new IngresoVehiculo_Control(this);
+    public void GuardarEntradaSalida(IngresoVehiculo_Control obj){
+        
         
         jbGuardar = new JButton("Guardar");
         jbGuardar.setBounds(100, 500, 200, 30);
-        jbGuardar.addActionListener(ctrl);
+        jbGuardar.addActionListener(obj);
         add(jbGuardar);
         
         jbVolver = new JButton("Volver");
         jbVolver.setBounds(310, 500, 200, 30);
-        jbVolver.addActionListener(ctrl);
+        jbVolver.addActionListener(obj);
         add(jbVolver);
         
         jbEntrada = new JButton("Entrada");
         jbEntrada.setBounds(20, 10, 150, 30);
-        jbEntrada.addActionListener(ctrl);
+        jbEntrada.addActionListener(obj);
         add(jbEntrada);
         
         jbSalida = new JButton("Salida");
         jbSalida.setBounds(185, 10, 150, 30);
-        jbSalida.addActionListener(ctrl);
+        jbSalida.addActionListener(obj);
         add(jbSalida);
         
         ind = new InDCliente_Vista(this);
@@ -65,9 +64,9 @@ public class IngresoVehiculo_Vista extends JFrame{
         
     }
     
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         IngresoVehiculo_Vista ing = new IngresoVehiculo_Vista(null);
-    }
+    }*/
     
     
 }

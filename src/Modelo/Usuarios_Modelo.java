@@ -13,15 +13,15 @@ public class Usuarios_Modelo implements DatosConexion{
     }
     
     public void guardarUsuario(){
-        String nom = cu.jtNombre.getText();
+        /*String nom = cu.jtNombre.getText();
         char contra[] = cu.jpContraseña.getPassword();
         String passw = String.valueOf(contra);
         String correo = cu.jtCorreo.getText();
         String tel = cu.jtTelefono.getText();
-        String rol = (String) cu.jcRol.getSelectedItem();
+        String rol = (String) cu.jcRol.getSelectedItem();*/
         
         cu.mp.listaUsuarios.add(cu.jtNombre.getText());
-        //char contra[] = cu.jpContraseña.getPassword();
+        char contra[] = cu.jpContraseña.getPassword();
         cu.mp.listaUsuarios.add(String.valueOf(contra));
         cu.mp.listaUsuarios.add(cu.jtCorreo.getText());
         cu.mp.listaUsuarios.add((String) cu.jcRol.getSelectedItem());
@@ -29,8 +29,8 @@ public class Usuarios_Modelo implements DatosConexion{
         cu.mp.listaUsuarios.add("");
         
         
-        Usuarios_Entidad us = new Usuarios_Entidad(nom, passw, correo, rol, tel, "");
-        cu.mp.listadoU.add(us);
+        //Usuarios_Entidad us = new Usuarios_Entidad(nom, passw, correo, rol, tel, "");
+        //cu.mp.listadoU.add(us);
         Conexion con = new Conexion();
         boolean error = con.conectarMySQL(baseDatos, user, login, host);
         if(!error){
