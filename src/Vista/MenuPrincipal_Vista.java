@@ -69,9 +69,9 @@ public class MenuPrincipal_Vista extends JFrame{
         jbAcerca.addActionListener(obj);
         add(jbAcerca);
     }
-    /*
+    
     public static void main(String[] args) {
         MenuPrincipal_Vista mp = new MenuPrincipal_Vista(null);
-    }*/
+    }
     
 }

@@ -35,7 +35,4 @@ public class Consulta_ID_Modelo {
             
            // con.desconectar(); // cerrar la conexion con la bd
       //  } // fin if(!error)
-    }   
-    
-    
-}
+

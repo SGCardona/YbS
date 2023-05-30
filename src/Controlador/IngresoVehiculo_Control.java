@@ -4,7 +4,6 @@ package Controlador;
 import Modelo.Clientes_Modelo;
 import Modelo.Vehiculo_Modelo;
 import Vista.IngresoVehiculo_Vista;
-import Vista.MenuPrincipal_Vista;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -12,8 +11,6 @@ import java.awt.event.ActionListener;
 public class IngresoVehiculo_Control  implements ActionListener{
     
     public IngresoVehiculo_Vista cl;
-    public MenuPrincipal_Vista mpv;
-    
 
     public IngresoVehiculo_Control(IngresoVehiculo_Vista cl) {
         this.cl = cl;
@@ -29,20 +26,17 @@ public class IngresoVehiculo_Control  implements ActionListener{
             vehiculo.guardar();
             //cl.jpDatosCliente.jtApellido.setText("");
             
-            cl.jtApellido.setText("");
-            cl.jtNombre.setText("");
-            cl.jtCedula.setText("");
-            cl.jtModelo.setText("");
-            cl.jtPlaca.setText("");
-            cl.jtTelefono.setText("");
-            cl.jtTipo.setText("");
+            cl.ind.jtApellido.setText("");
+            cl.ind.jtNombre.setText("");
+            cl.ind.jtCedula.setText("");
+            cl.ind.jtTelefono.setText("");
+            cl.indv.jtModelo.setText("");
+            cl.indv.jtPlaca.setText("");
+            cl.indv.jcTipo.setSelectedIndex(0);
         }
         if(e.getSource().equals(cl.jbVolver)){
             cl.setVisible(false);
             cl.dispose();
-            //mpv.ivv.setVisible(true); no funciono, cierra la app
-            //mpv.setVisible(true); no funciono, cierra la app
-            //no encuentro un boton que llame directamente al menupricipal vista
             cl.mp.setVisible(true);//me envia al inicio de todo para ingresar mi usuario
         }
         if(e.getSource().equals(cl.jbEntrada)){
