@@ -12,8 +12,6 @@ import javax.swing.JLabel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.JToggleButton;
-import javax.swing.border.Border;
-import javax.swing.border.LineBorder;
 
 public class InicioSesion_Vista extends JFrame{
     
@@ -26,11 +24,11 @@ public class InicioSesion_Vista extends JFrame{
     public ImageIcon ver, no_ver;
 
     public InicioSesion_Vista(VentanaPrincipal_Vista obj) {
-        super("Crear Usuario");
+        super("Inicio de Sesion");
         vp = obj;
-        
         setSize(500,500);
         setLocationRelativeTo(null);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(null);
         GUI();
         setVisible(true);

@@ -7,9 +7,9 @@ import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
 
-public class InDVehiculo_Control implements ActionListener, ChangeListener {
+public class JPIngVehiculo_Control implements ActionListener, ChangeListener {
     
-    public InDVehiculo_Control(){
+    public JPIngVehiculo_Control(){
         
     }
 

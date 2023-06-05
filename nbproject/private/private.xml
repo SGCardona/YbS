@@ -3,46 +3,18 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
-            <file>file:/C:/Users/Usuario/OneDrive/Documentos/Programacion/Proyecto_Final/src/Entidades/Clientes_Entidad.java</file>
+            <file>file:/C:/Users/Usuario/OneDrive/Documentos/Programacion/Proyecto_Final/src/Controlador/IngresoVehiculo_Control.java</file>
+            <file>file:/C:/Users/Usuario/OneDrive/Documentos/Programacion/Proyecto_Final/src/Vista/JPIngCliente_Vista.java</file>
             <file>file:/C:/Users/Usuario/OneDrive/Documentos/Programacion/Proyecto_Final/src/Modelo/ListadoCliente_Modelo.java</file>
-            <file>file:/C:/Users/Usuario/OneDrive/Documentos/Programacion/Proyecto_Final/src/Vista/JPVehiculos.java</file>
-            <file>file:/C:/Users/Usuario/OneDrive/Documentos/Programacion/Proyecto_Final/src/Vista/MenuPrincipal_Vista.java</file>
-            <file>file:/C:/Users/Usuario/OneDrive/Documentos/Programacion/Proyecto_Final/src/Controlador/MenuPrincipal_Control.java</file>
+            <file>file:/C:/Users/Usuario/OneDrive/Documentos/Programacion/Proyecto_Final/src/Modelo/InicioSesion_Modelo.java</file>
             <file>file:/C:/Users/Usuario/OneDrive/Documentos/Programacion/Proyecto_Final/src/Modelo/Clientes_Modelo.java</file>
-            <file>file:/C:/Users/Usuario/OneDrive/Documentos/Programacion/Proyecto_Final/src/Vista/JPClientes_Vehiculos.java</file>
-            <file>file:/C:/Users/Usuario/OneDrive/Documentos/Programacion/Proyecto_Final/src/Controlador/SubMenuListados_Control.java</file>
-            <file>file:/C:/Users/Usuario/OneDrive/Documentos/Programacion/Proyecto_Final/src/Vista/JPClientes.java</file>
-            <file>file:/C:/Users/Usuario/OneDrive/Documentos/Programacion/Proyecto_Final/src/Modelo/Conexion.java</file>
-            <file>file:/C:/Users/Usuario/OneDrive/Documentos/Programacion/Proyecto_Final/src/Vista/JPUsuarios.java</file>
-            <file>file:/C:/Users/Usuario/OneDrive/Documentos/Programacion/Proyecto_Final/src/Modelo/Vehiculo_Modelo.java</file>
-            <file>file:/C:/Users/Usuario/OneDrive/Documentos/Programacion/Proyecto_Final/src/Controlador/Listado_Control.java</file>
-            <file>file:/C:/Users/Usuario/OneDrive/Documentos/Programacion/Proyecto_Final/src/Entidades/Vehiculo_Entidad.java</file>
-            <file>file:/C:/Users/Usuario/OneDrive/Documentos/Programacion/Proyecto_Final/src/Modelo/ListadoUsuarios_Modelo.java</file>
-            <file>file:/C:/Users/Usuario/OneDrive/Documentos/Programacion/Proyecto_Final/src/Vista/ListadoUsuarios_Vista.java</file>
-            <file>file:/C:/Users/Usuario/OneDrive/Documentos/Programacion/Proyecto_Final/src/Vista/SubMenuListados_Vista.java</file>
-            <file>file:/C:/Users/Usuario/OneDrive/Documentos/Programacion/Proyecto_Final/src/Modelo/DatosConexion.java</file>
-            <file>file:/C:/Users/Usuario/OneDrive/Documentos/Programacion/Proyecto_Final/src/Vista/Listado_Vista.java</file>
+            <file>file:/C:/Users/Usuario/OneDrive/Documentos/Programacion/Proyecto_Final/src/Controlador/InicioSesion_Control.java</file>
+            <file>file:/C:/Users/Usuario/OneDrive/Documentos/Programacion/Proyecto_Final/src/Vista/CrearUsuario_Vista.java</file>
+            <file>file:/C:/Users/Usuario/OneDrive/Documentos/Programacion/Proyecto_Final/src/Vista/InicioSesion_Vista.java</file>
+            <file>file:/C:/Users/Usuario/OneDrive/Documentos/Programacion/Proyecto_Final/src/Controlador/CrearUsuario_Control.java</file>
+            <file>file:/C:/Users/Usuario/OneDrive/Documentos/Programacion/Proyecto_Final/src/Vista/JPTablaVehiculos.java</file>
             <file>file:/C:/Users/Usuario/OneDrive/Documentos/Programacion/Proyecto_Final/src/Modelo/Usuarios_Modelo.java</file>
-=======
-            <file>file:/C:/Users/usuario/PF3V/YbS/src/Proyecto_Final/Principal.java</file>
-            <file>file:/C:/Users/usuario/PF3V/YbS/src/Entidades/Clientes_Entidad.java</file>
-            <file>file:/C:/Users/usuario/PF3V/YbS/src/Controlador/VenatanaPrincipal_Control.java</file>
-            <file>file:/C:/Users/usuario/PF3V/YbS/src/Controlador/InDCliente_Control.java</file>
-            <file>file:/C:/Users/usuario/PF3V/YbS/src/Modelo/Vehiculo_Modelo.java</file>
-            <file>file:/C:/Users/usuario/PF3V/YbS/src/Modelo/Clientes_Modelo.java</file>
-            <file>file:/C:/Users/usuario/PF3V/YbS/src/Vista/InDVehiculo_Vista.java</file>
-            <file>file:/C:/Users/usuario/PF3V/YbS/src/Controlador/InDVehiculo_Control.java</file>
-            <file>file:/C:/Users/usuario/PF3V/YbS/src/Controlador/MenuPrincipal_Control.java</file>
-            <file>file:/C:/Users/usuario/PF3V/YbS/src/Vista/VentanaPrincipal_Vista.java</file>
-            <file>file:/C:/Users/usuario/PF3V/YbS/src/Vista/IngresoVehiculo_Vista.java</file>
-            <file>file:/C:/Users/usuario/PF3V/YbS/src/Controlador/InicioSesion_Control.java</file>
-            <file>file:/C:/Users/usuario/PF3V/YbS/src/Vista/InicioSesion_Vista.java</file>
-            <file>file:/C:/Users/usuario/PF3V/YbS/src/Modelo/ListadoCliente_Modelo.java</file>
-            <file>file:/C:/Users/usuario/PF3V/YbS/src/Controlador/IngresoVehiculo_Control.java</file>
-            <file>file:/C:/Users/usuario/PF3V/YbS/src/Vista/InDCliente_Vista.java</file>
-            <file>file:/C:/Users/usuario/PF3V/YbS/src/Vista/MenuPrincipal_Vista.java</file>
->>>>>>> 43370af1ed333848a2cd467a23dae116e59addca
+            <file>file:/C:/Users/Usuario/OneDrive/Documentos/Programacion/Proyecto_Final/src/Vista/IngresoVehiculo_Vista.java</file>
         </group>
     </open-files>
 </project-private>

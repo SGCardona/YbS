@@ -11,14 +11,14 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.border.LineBorder;
 
-public class JPVehiculos extends JPanel{
+public class JPTablaVehiculos extends JPanel{
 
     public SubMenuListados_Vista sub;
     public ListadoCliente_Modelo ls;
     public ModeloTabla_Vista mt;
     public JTable tablaV;
     
-    public JPVehiculos(SubMenuListados_Vista obj) {
+    public JPTablaVehiculos(SubMenuListados_Vista obj) {
         sub = obj;
         setBorder(new LineBorder(Color.RED));
         setBounds(300, 50, 1150, 700);
@@ -33,7 +33,7 @@ public class JPVehiculos extends JPanel{
     }
     public void tablaV(){
         
-        String encabezados[] = {"Vehiculo", "Placa", "Modelo", "Entrada", "Salida"};
+        String encabezados[] = {"Vehiculo", "Placa", "Modelo", "Fecha Entrada", "Hora Entrada"};
         String datos[][] = {{"", "", "", "", ""}};
         mt = new ModeloTabla_Vista(datos, encabezados);
         tablaV = new JTable(mt);

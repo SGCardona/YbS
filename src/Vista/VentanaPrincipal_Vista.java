@@ -25,6 +25,7 @@ public class VentanaPrincipal_Vista extends JFrame{
         
         setSize(600,600);
         setLocationRelativeTo(null);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(null);
         GUI();
         setVisible(true);

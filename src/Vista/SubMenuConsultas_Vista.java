@@ -27,6 +27,7 @@ public class SubMenuConsultas_Vista extends JFrame{
         this.mp = mp;
         setSize(1500,1000);
         setLocationRelativeTo(null);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(null);
         GUI();
         id = new Consul_Cliente_X_ID(this);

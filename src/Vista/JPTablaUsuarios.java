@@ -8,15 +8,16 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.border.LineBorder;
 
-public class JPClientes extends JPanel{
+
+public class JPTablaUsuarios extends JPanel{
     
     public SubMenuListados_Vista sub;
     public ListadoCliente_Modelo ls;
     public ModeloTabla_Vista mt;
-    public JTable tablaC;
+    public JTable tablaU;
 
-    public JPClientes(SubMenuListados_Vista sub) {
-        this.sub = sub;
+    public JPTablaUsuarios(SubMenuListados_Vista obj) {
+        sub = obj;
         setBorder(new LineBorder(Color.RED));
         setBounds(300, 50, 1150, 700);
         setLayout(null);
@@ -24,27 +25,24 @@ public class JPClientes extends JPanel{
         setVisible(false);
     }
     public void GUI(){
-        tablaC();
+        tablaU();
         ls = new ListadoCliente_Modelo(this);
-        ls.addRegistrosC();
+        ls.addRegistrosU();
     }
-    public void tablaC(){
+    public void tablaU(){
+        String encabezados[] = {"Usuario", "Contraseña", "Correo", "Telefono", "Rol"};
+        String datos[][] = {{"", "", "", "", ""}};
         
-        String encabezados[] = {"Cedula", "Apellido", "Nombre", "Telefono"};
-        String datos[][] = {{"", "", "", ""}};
         mt = new ModeloTabla_Vista(datos, encabezados);
-        tablaC = new JTable(mt);
+        tablaU = new JTable(mt);
         
-        tablaC.setSelectionBackground(Color.lightGray);
-        tablaC.setSelectionForeground(Color.RED);
-//        tablaC.setVisible(false);
+        tablaU.setSelectionBackground(Color.lightGray);
+        tablaU.setSelectionForeground(Color.RED);
                 
-        JScrollPane js = new JScrollPane(tablaC);
+        JScrollPane js = new JScrollPane(tablaU);
         js.setBounds(25, 100, 1100, 550);        
         add(js);
     }
-    
-    
     
     
 }

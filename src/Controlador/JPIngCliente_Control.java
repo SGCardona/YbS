@@ -7,9 +7,9 @@ import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
 
-public class InDCliente_Control implements ActionListener, ChangeListener{
+public class JPIngCliente_Control implements ActionListener, ChangeListener{
     
-    public InDCliente_Control(){
+    public JPIngCliente_Control(){
         
     }
 

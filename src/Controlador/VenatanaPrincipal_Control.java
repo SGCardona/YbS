@@ -14,7 +14,6 @@ public class VenatanaPrincipal_Control implements ActionListener{
     public VenatanaPrincipal_Control(VentanaPrincipal_Vista obj) {
         vp = obj;   
     }
-    
     @Override
     public void actionPerformed(ActionEvent e) {
         
