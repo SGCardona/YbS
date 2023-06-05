@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package Vista;
 
 import Modelo.ListadoCliente_Modelo;
@@ -11,14 +8,15 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.border.LineBorder;
 
-public class JPTablaVehiculos extends JPanel{
 
+public class JPUsuarios extends JPanel{
+    
     public SubMenuListados_Vista sub;
     public ListadoCliente_Modelo ls;
     public ModeloTabla_Vista mt;
-    public JTable tablaV;
-    
-    public JPTablaVehiculos(SubMenuListados_Vista obj) {
+    public JTable tablaU;
+
+    public JPUsuarios(SubMenuListados_Vista obj) {
         sub = obj;
         setBorder(new LineBorder(Color.RED));
         setBounds(300, 50, 1150, 700);
@@ -27,26 +25,24 @@ public class JPTablaVehiculos extends JPanel{
         setVisible(false);
     }
     public void GUI(){
-        tablaV();
+        tablaU();
         ls = new ListadoCliente_Modelo(this);
-        ls.addRegistrosV();
+        ls.addRegistrosU();
     }
-    public void tablaV(){
-        
-        String encabezados[] = {"Vehiculo", "Placa", "Modelo", "Fecha Entrada", "Hora Entrada"};
+    public void tablaU(){
+        String encabezados[] = {"Usuario", "Contraseña", "Correo", "Telefono", "Rol"};
         String datos[][] = {{"", "", "", "", ""}};
-        mt = new ModeloTabla_Vista(datos, encabezados);
-        tablaV = new JTable(mt);
         
-        tablaV.setSelectionBackground(Color.lightGray);
-        tablaV.setSelectionForeground(Color.RED);
-//        tablaV.setVisible(false);
+        mt = new ModeloTabla_Vista(datos, encabezados);
+        tablaU = new JTable(mt);
+        
+        tablaU.setSelectionBackground(Color.lightGray);
+        tablaU.setSelectionForeground(Color.RED);
                 
-        JScrollPane js = new JScrollPane(tablaV);
+        JScrollPane js = new JScrollPane(tablaU);
         js.setBounds(25, 100, 1100, 550);        
         add(js);
     }
-    
     
     
 }

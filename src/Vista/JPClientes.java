@@ -8,14 +8,14 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.border.LineBorder;
 
-public class JPTablaClientes extends JPanel{
+public class JPClientes extends JPanel{
     
     public SubMenuListados_Vista sub;
     public ListadoCliente_Modelo ls;
     public ModeloTabla_Vista mt;
     public JTable tablaC;
 
-    public JPTablaClientes(SubMenuListados_Vista sub) {
+    public JPClientes(SubMenuListados_Vista sub) {
         this.sub = sub;
         setBorder(new LineBorder(Color.RED));
         setBounds(300, 50, 1150, 700);

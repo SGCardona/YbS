@@ -291,7 +291,7 @@ public class Conexion {
                         f++;
                     }
                 }else{
-                    //JOptionPane.showMessageDialog(null, "No hay registros que cumplan con la condición");
+                    JOptionPane.showMessageDialog(null, "No hay registros que cumplan con la condición");
                 }
                 
                 cerrarConsulta();

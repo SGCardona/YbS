@@ -1,6 +1,8 @@
 
 package Vista;
-import Controlador.Consul_Cliente_X_ID_Control;
+
+import Controlador.Consul_Modelo_Control;
+import Controlador.Consul_Tipo_Vehiculo_Control;
 import Modelo.ListadoCliente_Modelo;
 import java.awt.Color;
 import java.awt.Font;
@@ -14,17 +16,17 @@ import javax.swing.SwingConstants;
 import javax.swing.border.EtchedBorder;
 import javax.swing.border.LineBorder;
 
-public class Consul_Cliente_X_ID extends JPanel{ //Vista de consular por cedula
+public class Consul_Modelo extends JPanel{ //Vista de consultar por modelo vehiculo
     
     public JButton jbConsultar;
-    public JLabel jlTituloJTable, jlCedula;
-    public JTextField jtCedula;
+    public JLabel jlTituloJTable, jlmodelo;
+    public JTextField jtmodelo;
     public SubMenuConsultas_Vista sub;
     public ListadoCliente_Modelo ls;
     public ModeloTabla_Vista mt;
     public JTable tablaC;
 
-    public Consul_Cliente_X_ID(SubMenuConsultas_Vista sub) {
+    public Consul_Modelo(SubMenuConsultas_Vista sub) {
         this.sub = sub;
         setBorder(new LineBorder(Color.RED));
         setBounds(300, 0, 1150, 750);
@@ -34,14 +36,14 @@ public class Consul_Cliente_X_ID extends JPanel{ //Vista de consular por cedula
     }
     public void GUI(){
        
-     Consul_Cliente_X_ID_Control ctrl = new Consul_Cliente_X_ID_Control(this);
+     Consul_Modelo_Control ctrl = new Consul_Modelo_Control(this);
      tablaC(ctrl);
      
     }
     
-    public void tablaC(Consul_Cliente_X_ID_Control obj){
+    public void tablaC(Consul_Modelo_Control obj){
         
-        jlTituloJTable = new JLabel("  Consulta por Cedula");        
+        jlTituloJTable = new JLabel("  Consulta por Modelo Vehiculo");        
         jlTituloJTable.setBounds(0, 0, 1150 ,70); 
         jlTituloJTable.setOpaque(true);
         jlTituloJTable.setBackground(Color.WHITE);
@@ -66,16 +68,16 @@ public class Consul_Cliente_X_ID extends JPanel{ //Vista de consular por cedula
         js.setBounds(25, 100, 1100, 550);        
         add(js);
         
-        jlCedula = new JLabel("Numero de Cedula:");
-        jlCedula.setBounds(70, 680, 120, 25);
-        jlCedula.setVisible(true); // el componente se muestra
-        add(jlCedula); // anadir el JLabel al JFrame
+        jlmodelo = new JLabel("Modelo de vehiculo:");
+        jlmodelo.setBounds(70, 680, 120, 25);
+        jlmodelo.setVisible(true); // el componente se muestra
+        add(jlmodelo); // anadir el JLabel al JFrame
         
-        jtCedula = new JTextField();
-        jtCedula.setBounds(200, 680, 100, 25);
-        jtCedula.setVisible(true); // el componente se muestra
-        jtCedula.addActionListener(obj); 
-        add(jtCedula); // anadir el JTextField al JFrame
+        jtmodelo = new JTextField();
+        jtmodelo.setBounds(200, 680, 100, 25);
+        jtmodelo.setVisible(true); // el componente se muestra
+        jtmodelo.addActionListener(obj); 
+        add(jtmodelo); // anadir el JTextField al JFrame
         
         jbConsultar = new JButton("Consultar");
         jbConsultar.setBounds(500, 680, 150, 30);

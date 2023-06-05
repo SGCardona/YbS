@@ -19,7 +19,12 @@ public class MenuPrincipal_Control implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource().equals(mp.jbDatos)){
+//<<<<<<< HEAD
+            //InDClientes_Vista ini = new InDClientes_Vista(mp);
             IngresoVehiculo_Vista ini = new IngresoVehiculo_Vista(mp);
+//=======
+            //IngresoVehiculo_Vista ini = new IngresoVehiculo_Vista(mp.vp);
+//>>>>>>> 43370af1ed333848a2cd467a23dae116e59addca
             mp.setVisible(false);
         }
         if(e.getSource().equals(mp.jbListados)){
@@ -29,11 +34,6 @@ public class MenuPrincipal_Control implements ActionListener{
         if(e.getSource().equals(mp.jbConsulta)){
             SubMenuConsultas_Vista subC = new SubMenuConsultas_Vista(mp);
             mp.setVisible(false);
-        }
-        if(e.getSource().equals(mp.jbSalida)){
-            mp.setVisible(false);
-            mp.dispose();
-            mp.vp.setVisible(true);
         }
     }
     

@@ -13,25 +13,24 @@ public class SubMenuListados_Vista extends JFrame{
     
     public MenuPrincipal_Vista mp;
     public JButton jblistaU, jblistaC, jblistaV, jblistaCV, jbSalida;
-    public JPTablaUsuarios jpU;
-    public JPTablaClientes jpC;
-    public JPTablaVehiculos jpV;
-    public JPTablaClientes_Vehiculos jpCV;
+    public JPUsuarios jpU;
+    public JPClientes jpC;
+    public JPVehiculos jpV;
+    public JPClientes_Vehiculos jpCV;
 
     public SubMenuListados_Vista(MenuPrincipal_Vista mp){
         super("Sub Menu Listas");
         this.mp = mp;
         setSize(1500,1000);
         setLocationRelativeTo(null);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(null);
-        jpU = new JPTablaUsuarios(this);
+        jpU = new JPUsuarios(this);
         add(jpU);
-        jpC = new JPTablaClientes(this);
+        jpC = new JPClientes(this);
         add(jpC);
-        jpV = new JPTablaVehiculos(this);
+        jpV = new JPVehiculos(this);
         add(jpV);
-        jpCV = new JPTablaClientes_Vehiculos(this);
+        jpCV = new JPClientes_Vehiculos(this);
         add(jpCV);
         GUI();
         setVisible(true);

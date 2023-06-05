@@ -11,15 +11,14 @@ import javax.swing.JFrame;
 public class IngresoVehiculo_Vista extends JFrame{
     public JButton jbGuardar, jbVolver, jbEntrada, jbSalida;
     public MenuPrincipal_Vista mp;
-    public JPIngCliente_Vista ind;
-    public JPIngVehiculo_Vista indv;
+    public InDCliente_Vista ind;
+    public InDVehiculo_Vista indv;
 
     public IngresoVehiculo_Vista(MenuPrincipal_Vista obj) {
         super("Clientes");
         mp = obj;
         setSize(600,600);
         setLocationRelativeTo(null);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(null);
         GUI();
         setVisible(true);
@@ -35,6 +34,8 @@ public class IngresoVehiculo_Vista extends JFrame{
     }
     
     public void GuardarEntradaSalida(IngresoVehiculo_Control obj){
+        
+        
         jbGuardar = new JButton("Guardar");
         jbGuardar.setBounds(100, 500, 200, 30);
         jbGuardar.addActionListener(obj);
@@ -55,17 +56,17 @@ public class IngresoVehiculo_Vista extends JFrame{
         jbSalida.addActionListener(obj);
         add(jbSalida);
         
-        ind = new JPIngCliente_Vista(this);
+        ind = new InDCliente_Vista(this);
         add(ind);
         
-        indv = new JPIngVehiculo_Vista(this);
+        indv = new InDVehiculo_Vista(this);
         add(indv);
         
     }
     
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         IngresoVehiculo_Vista ing = new IngresoVehiculo_Vista(null);
-    }
+    }*/
     
     
 }
