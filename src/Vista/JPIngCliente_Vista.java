@@ -9,7 +9,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.LineBorder;
 
-public class InDCliente_Vista extends JPanel{
+public class JPIngCliente_Vista extends JPanel{
     
     public JTextField jtNombre, jtApellido, jtTelefono, jtCedula;
     public JLabel jlNombre, jlApellido, jlTelefono, jlCedula;
@@ -18,7 +18,7 @@ public class InDCliente_Vista extends JPanel{
     
     //public IngresoVehiculo_Control ivc;
     
-    public InDCliente_Vista(IngresoVehiculo_Vista obj){
+    public JPIngCliente_Vista(IngresoVehiculo_Vista obj){
         ivc = obj;
         setBorder(new LineBorder(Color.WHITE));
         setBounds(40, 270, 510, 210);

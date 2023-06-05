@@ -1,10 +1,8 @@
 
 package Vista;
 
-import Controlador.IngresoVehiculo_Control;
 import Controlador.MenuPrincipal_Control;
 import java.awt.Color;
-import java.awt.HeadlessException;
 import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -14,13 +12,14 @@ public class MenuPrincipal_Vista extends JFrame{
     
     public IngresoVehiculo_Vista ivv;
     public VentanaPrincipal_Vista vp;
-    public JButton jbDatos, jbListados, jbGraficas, jbConsulta, jbAcerca;
+    public JButton jbDatos, jbListados, jbGraficas, jbConsulta, jbAcerca, jbSalida;
 
     public MenuPrincipal_Vista(VentanaPrincipal_Vista vp){
         super("Menu Principal");
         this.vp = vp;
         setSize(600,400);
         setLocationRelativeTo(null);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(null);
         GUI();
         setVisible(true);
@@ -38,6 +37,7 @@ public class MenuPrincipal_Vista extends JFrame{
         consultas(ctrl);
         graficas(ctrl);
         acerdaDe(ctrl);
+        salida(ctrl);
     }
     public void ingreso_datos(MenuPrincipal_Control obj){
         jbDatos = new JButton("Ingreso vehiculo");
@@ -69,7 +69,15 @@ public class MenuPrincipal_Vista extends JFrame{
         jbAcerca.addActionListener(obj);
         add(jbAcerca);
     }
-    
+    public void salida(MenuPrincipal_Control obj){
+        ImageIcon image = new ImageIcon(getClass().getResource("../Imagenes/Exit_Icon.png"));
+        jbSalida = new JButton(image);
+        jbSalida.setContentAreaFilled(false);
+        jbSalida.setBorderPainted(false);
+        jbSalida.setBounds(20, 310, 35, 35);
+        jbSalida.addActionListener(obj);
+        add(jbSalida);
+    }
     public static void main(String[] args) {
         MenuPrincipal_Vista mp = new MenuPrincipal_Vista(null);
     }

@@ -31,6 +31,7 @@ public class InicioSesion_Vista extends JFrame{
         
         setSize(500,500);
         setLocationRelativeTo(null);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(null);
         GUI();
         setVisible(true);

@@ -1,8 +1,6 @@
 
 package Controlador;
 
-import Vista.ListadoUsuarios_Vista;
-import Vista.Listado_Vista;
 import Vista.SubMenuListados_Vista;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

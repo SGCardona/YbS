@@ -29,29 +29,29 @@ public class SubMenuConsultas_Vista extends JFrame{
         this.mp = mp;
         setSize(1500,800);
         setLocationRelativeTo(null);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(null);
         GUI();
         id = new Consul_Cliente_X_ID(this);
-        estado = new Consul_Cliente_X_Estado(this);
-        placa = new Consul_Placa(this);
-        vehi = new Consul_Tipo_Vehiculo(this);
-        nom = new Consul_Nombre(this);
-        model = new Consul_Modelo(this);
-        ent = new Consul_Entrada(this);
-        sal = new Consul_Salida(this);
-        ape = new Consul_Apellido(this);
-        tel = new Consul_Telefono(this);
         add(id);
+        estado = new Consul_Cliente_X_Estado(this);
         add(estado);
+        placa = new Consul_Placa(this);
         add(placa);
+        vehi = new Consul_Tipo_Vehiculo(this);
         add(vehi);
+        nom = new Consul_Nombre(this);
         add(nom);
+        model = new Consul_Modelo(this);
         add(model);
+        ent = new Consul_Entrada(this);
         add(ent);
+        sal = new Consul_Salida(this);
         add(sal);
+        ape = new Consul_Apellido(this);
         add(ape);
+        tel = new Consul_Telefono(this);
         add(tel);
-        
         setVisible(true);
     }
     public void GUI(){

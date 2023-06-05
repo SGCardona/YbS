@@ -31,18 +31,16 @@ public class CrearUsuario_Control implements ActionListener{
         if(e.getSource().equals(cu.jbGuardar)){
             Usuarios_Modelo us = new Usuarios_Modelo(cu);
             us.guardarUsuario();
-            
             cu.jtNombre.setText("");
             cu.jpContraseña.setText("");
             cu.jtCorreo.setText("");
             cu.jtTelefono.setText("");
             cu.jcRol.setToolTipText(""); 
         }
-        
         if(e.getSource().equals(cu.jbCancelar)){
             cu.setVisible(false);
             cu.dispose();
-            cu.mp.setVisible(true);   
+            cu.vp.setVisible(true);   
         }
         
     }
