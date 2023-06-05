@@ -62,7 +62,7 @@ public class Consul_Cliente_X_Estado_Control implements ActionListener {
                 cd.mt.removeRow(0); // eliminar todas las filas del JTable para mostrar nuevos resultados
             }
             System.out.println(cd.mt.getRowCount());
-            String registros[][] = con.consultaMatriz("ventas", "num_id = '" + cd.jtestado.getText() + "'");
+            String registros[][] = con.consultaMatriz("usuarios", "estado = '" + cd.jtestado.getText() + "'");
             if (registros != null) {
                 cd.tablaC.setVisible(true); // mostrar el JTable                        
                 for (int f = 0; f < registros.length; f++) {

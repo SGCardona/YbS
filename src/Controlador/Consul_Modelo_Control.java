@@ -35,7 +35,7 @@ public class Consul_Modelo_Control implements ActionListener {
                 cd.mt.removeRow(0); // eliminar todas las filas del JTable para mostrar nuevos resultados
             }
             System.out.println(cd.mt.getRowCount());
-            String registros[][] = con.consultaMatriz("Clientes y vehiculos", "modelo = '" + cd.jtmodelo.getText() + "'");
+            String registros[][] = con.consultaMatriz("clientes", "modelo = '" + cd.jtmodelo.getText() + "'");
             if (registros != null) {
                 cd.tablaC.setVisible(true); // mostrar el JTable                        
                 for (int f = 0; f < registros.length; f++) {
@@ -62,7 +62,7 @@ public class Consul_Modelo_Control implements ActionListener {
                 cd.mt.removeRow(0); // eliminar todas las filas del JTable para mostrar nuevos resultados
             }
             System.out.println(cd.mt.getRowCount());
-            String registros[][] = con.consultaMatriz("Clientes y vehiculos", "modelo = '" + cd.jtmodelo.getText() + "'");
+            String registros[][] = con.consultaMatriz("clientes", "modelo = '" + cd.jtmodelo.getText() + "'");
             if (registros != null) {
                 cd.tablaC.setVisible(true); // mostrar el JTable                        
                 for (int f = 0; f < registros.length; f++) {

@@ -6,7 +6,6 @@ import static Modelo.DatosConexion.baseDatos;
 import static Modelo.DatosConexion.host;
 import static Modelo.DatosConexion.login;
 import static Modelo.DatosConexion.user;
-import Vista.Consul_Cliente_X_ID;
 import Vista.Consul_Placa;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -36,7 +35,7 @@ public class Consul_Placa_Control implements ActionListener {
                 cd.mt.removeRow(0); // eliminar todas las filas del JTable para mostrar nuevos resultados
             }
             System.out.println(cd.mt.getRowCount());
-            String registros[][] = con.consultaMatriz("Clientes y vehiculos", "placa = '" + cd.jtplaca.getText() + "'");
+            String registros[][] = con.consultaMatriz("clientes", "placa = '" + cd.jtplaca.getText() + "'");
             if (registros != null) {
                 cd.tablaC.setVisible(true); // mostrar el JTable                        
                 for (int f = 0; f < registros.length; f++) {
@@ -63,7 +62,7 @@ public class Consul_Placa_Control implements ActionListener {
                 cd.mt.removeRow(0); // eliminar todas las filas del JTable para mostrar nuevos resultados
             }
             System.out.println(cd.mt.getRowCount());
-            String registros[][] = con.consultaMatriz("Clientes y vehiculos", "placa = '" + cd.jtplaca.getText() + "'");
+            String registros[][] = con.consultaMatriz("Clientes", "placa = '" + cd.jtplaca.getText() + "'");
             if (registros != null) {
                 cd.tablaC.setVisible(true); // mostrar el JTable                        
                 for (int f = 0; f < registros.length; f++) {

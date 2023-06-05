@@ -14,15 +14,9 @@ import java.awt.event.ActionListener;
 public class Consul_Nombre_Control implements ActionListener {
 
     Consul_Nombre cd;
-    
-    
     public Consul_Nombre_Control(Consul_Nombre obj) {
        cd = obj;
-       
     }
-    
-    
-
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource().equals(cd.jtnom)){
@@ -36,7 +30,7 @@ public class Consul_Nombre_Control implements ActionListener {
                 cd.mt.removeRow(0); // eliminar todas las filas del JTable para mostrar nuevos resultados
             }
             System.out.println(cd.mt.getRowCount());
-            String registros[][] = con.consultaMatriz("Clientes y vehiculos", "nombre = '" + cd.jtnom.getText() + "'");
+            String registros[][] = con.consultaMatriz("clientes", "nombre = '" + cd.jtnom.getText() + "'");
             if (registros != null) {
                 cd.tablaC.setVisible(true); // mostrar el JTable                        
                 for (int f = 0; f < registros.length; f++) {
@@ -63,7 +57,7 @@ public class Consul_Nombre_Control implements ActionListener {
                 cd.mt.removeRow(0); // eliminar todas las filas del JTable para mostrar nuevos resultados
             }
             System.out.println(cd.mt.getRowCount());
-            String registros[][] = con.consultaMatriz("Clientes y vehiculos", "nombre = '" + cd.jtnom.getText() + "'");
+            String registros[][] = con.consultaMatriz("clientes", "nombre = '" + cd.jtnom.getText() + "'");
             if (registros != null) {
                 cd.tablaC.setVisible(true); // mostrar el JTable                        
                 for (int f = 0; f < registros.length; f++) {

@@ -53,7 +53,7 @@ public class Consul_Cliente_X_Estado extends JPanel{ //Vista de consultar por es
         add(jlTituloJTable); // anadir el JLabel al JPanel jpResultados
         
         
-        String encabezados[] = {"Usuario", "Correo", "Telefono", "Rol", "Estado"};
+        String encabezados[] = {"Usuario", "Contraseña", "Correo", "Telefono", "Rol","Estado"};
         String datos[][] = {{"", "", "", "", ""}};
         mt = new ModeloTabla_Vista(datos, encabezados);
         tablaC = new JTable(mt);

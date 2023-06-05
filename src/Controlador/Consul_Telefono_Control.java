@@ -13,16 +13,10 @@ import java.awt.event.ActionListener;
 
 public class Consul_Telefono_Control implements ActionListener {
 
-    Consul_Telefono cd;
-    
-    
+    Consul_Telefono cd; 
     public Consul_Telefono_Control(Consul_Telefono obj) {
-       cd = obj;
-       
+       cd = obj;   
     }
-    
-    
-
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource().equals(cd.jttipo)){
@@ -36,7 +30,7 @@ public class Consul_Telefono_Control implements ActionListener {
                 cd.mt.removeRow(0); // eliminar todas las filas del JTable para mostrar nuevos resultados
             }
             System.out.println(cd.mt.getRowCount());
-            String registros[][] = con.consultaMatriz("Clientes y vehiculos", "telefono = '" + cd.jttipo.getText() + "'");
+            String registros[][] = con.consultaMatriz("clientes", "telefono = '" + cd.jttipo.getText() + "'");
             if (registros != null) {
                 cd.tablaC.setVisible(true); // mostrar el JTable                        
                 for (int f = 0; f < registros.length; f++) {
@@ -63,7 +57,7 @@ public class Consul_Telefono_Control implements ActionListener {
                 cd.mt.removeRow(0); // eliminar todas las filas del JTable para mostrar nuevos resultados
             }
             System.out.println(cd.mt.getRowCount());
-            String registros[][] = con.consultaMatriz("Clientes y vehiculos", "telefono = '" + cd.jttipo.getText() + "'");
+            String registros[][] = con.consultaMatriz("clientes", "telefono = '" + cd.jttipo.getText() + "'");
             if (registros != null) {
                 cd.tablaC.setVisible(true); // mostrar el JTable                        
                 for (int f = 0; f < registros.length; f++) {

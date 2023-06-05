@@ -55,7 +55,7 @@ public class Consul_Telefono extends JPanel{ //Vista de consultar por tipo vehic
         add(jlTituloJTable); // anadir el JLabel al JPanel jpResultados
         
         
-        String encabezados[] = {"Cedula", "Apellido", "Nombre", "Telefono", "Vehiculo", "Placa", "Modelo", "Entrada", "Salida"};
+        String encabezados[] = {"Cedula", "Apellido", "Nombre", "Telefono", "Vehiculo", "Placa", "Modelo", "Fecha Entrada", "Hora Entrada"};
         String datos[][] = {{"", "", "", "", "", "" , "" , "" , ""}};
         mt = new ModeloTabla_Vista(datos, encabezados);
         tablaC = new JTable(mt);

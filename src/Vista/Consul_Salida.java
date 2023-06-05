@@ -54,7 +54,7 @@ public class Consul_Salida extends JPanel{ //Vista de consultar por hora salida 
         add(jlTituloJTable); // anadir el JLabel al JPanel jpResultados
         
         
-        String encabezados[] = {"Cedula", "Apellido", "Nombre", "Telefono", "Vehiculo", "Placa", "Modelo", "Entrada", "Salida"};
+        String encabezados[] = {"Cedula", "Apellido", "Nombre", "Telefono", "Vehiculo", "Placa", "Modelo", "Fecha Entrada", "Hora Entrada"};
         String datos[][] = {{"", "", "", "", "", "" , "" , "" , ""}};
         mt = new ModeloTabla_Vista(datos, encabezados);
         tablaC = new JTable(mt);

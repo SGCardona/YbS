@@ -31,7 +31,7 @@ public class JPTablaClientes_Vehiculos extends JPanel{
     }
     public void tablaCV(){
         
-        String encabezados[] = {"Cedula","Apellido", "Nombre", "Telefono", "Vehiculo", "Placa", "Modelo", "Entrada", "Salida"};
+        String encabezados[] = {"Cedula","Apellido", "Nombre", "Telefono", "Vehiculo", "Placa", "Modelo", "Fecha Entrada", "Hora Entrada"};
         String datos[][] = {{"", "", "", "", "", "",  "", "", ""}};
         mt = new ModeloTabla_Vista(datos, encabezados);
         tablaCV = new JTable(mt);

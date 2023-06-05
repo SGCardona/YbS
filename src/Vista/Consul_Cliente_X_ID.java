@@ -53,7 +53,7 @@ public class Consul_Cliente_X_ID extends JPanel{ //Vista de consular por cedula
         add(jlTituloJTable); // anadir el JLabel al JPanel jpResultados
         
         
-        String encabezados[] = {"Cedula", "Apellido", "Nombre", "Telefono", "Vehiculo", "Placa", "Modelo", "Entrada", "Salida"};
+        String encabezados[] = {"Cedula", "Apellido", "Nombre", "Telefono", "Vehiculo", "Placa", "Modelo","Fecha Entrada", "Hora Entrada"};
         String datos[][] = {{"", "", "", "", "", "" , "" , "" , ""}};
         mt = new ModeloTabla_Vista(datos, encabezados);
         tablaC = new JTable(mt);
