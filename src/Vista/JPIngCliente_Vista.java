@@ -4,10 +4,12 @@ package Vista;
 import Controlador.IngresoVehiculo_Control;
 import java.awt.Color;
 import java.awt.Font;
+import javax.swing.BorderFactory;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.LineBorder;
+import javax.swing.border.TitledBorder;
 
 public class JPIngCliente_Vista extends JPanel{
     
@@ -23,6 +25,10 @@ public class JPIngCliente_Vista extends JPanel{
         setBorder(new LineBorder(Color.WHITE));
         setBounds(40, 270, 510, 210);
         setBackground(Color.LIGHT_GRAY);
+        setOpaque(false);
+        TitledBorder border = BorderFactory.createTitledBorder(BorderFactory.createLineBorder(Color.WHITE), "Datos del vehiculo");
+        border.setTitleColor(Color.WHITE);
+        setBorder(border);
         setLayout(null);
         crearGUI();
         setVisible(false);

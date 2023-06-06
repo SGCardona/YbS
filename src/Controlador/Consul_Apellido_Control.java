@@ -14,14 +14,9 @@ public class Consul_Apellido_Control implements ActionListener {
 
     Consul_Apellido cd;
     
-    
     public Consul_Apellido_Control(Consul_Apellido obj) {
-       cd = obj;
-       
+       cd = obj;  
     }
-    
-    
-
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource().equals(cd.jttipo)){
