@@ -8,10 +8,12 @@ import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 
 public class VentanaPrincipal_Vista extends JFrame{
     
     public JButton jbCrear, jbEntrada, jbSalida;
+    public JLabel jlLogo;
 //    public ArrayList <String> listaCliente = new ArrayList<>();
     public ArrayList <String> listaClienteVehiculo = new ArrayList<>();
 //    public ArrayList <String> listaVehiculo = new ArrayList<>();
@@ -34,6 +36,12 @@ public class VentanaPrincipal_Vista extends JFrame{
         Image icn = new ImageIcon(getClass().getResource("../Imagenes/Car_Icon.png")).getImage();
         setIconImage(icn);
         setResizable(false);
+
+        //ImageIcon ImgLogo = new ImageIcon(getClass().getResource("../imagenes/YBSparking.png"));
+        ImageIcon ImgLogo = new ImageIcon(getClass().getResource("../imagenes/YBSparkingSinFondo.png"));
+        jlLogo = new JLabel(ImgLogo);
+        jlLogo.setBounds(100, 25, 400, 400);
+        add(jlLogo);
         
         VenatanaPrincipal_Control ctrl = new VenatanaPrincipal_Control(this);
         iniciarSesion(ctrl);// Boton mostrar ventana InicioSesion
