@@ -19,7 +19,9 @@ public class IngresoVehiculo_Control  implements ActionListener{
         
         if(e.getSource().equals(cl.jbGuardar)){
             Clientes_Modelo cliente = new Clientes_Modelo(cl);
-            cliente.guardar();
+            cliente.gCliente();
+            cliente.gVehiculo();
+            cliente.gAfiliado();
             cl.ind.jtApellido.setText("");
             cl.ind.jtNombre.setText("");
             cl.ind.jtCedula.setText("");
