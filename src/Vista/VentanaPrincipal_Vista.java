@@ -8,22 +8,22 @@ import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 
 public class VentanaPrincipal_Vista extends JFrame{
     
     public JButton jbCrear, jbEntrada, jbSalida;
     public ArrayList <String> listaAfiliado = new ArrayList<>();
-    public ArrayList <String> listaNoAfiliado = new ArrayList<>();
     public ArrayList <String> listaCliente = new ArrayList<>();
+    public ArrayList <String> listaNoAfiliado = new ArrayList<>();
     public ArrayList <String> listaVehiculo = new ArrayList<>();
     public ArrayList <String> listaUsuarios = new ArrayList<>();
-//    public ArrayList <Usuarios_Entidad> listadoU = new ArrayList<>();
-//    public ArrayList <Clientes_Entidad> listadoC = new ArrayList<>();
-//    public ArrayList <Vehiculo_Entidad> listadoV = new ArrayList<>();
+    public JLabel jlLogo;
+    public ArrayList <String> listaClienteVehiculo = new ArrayList<>();
+
 
     public VentanaPrincipal_Vista(){   
         super("YBS Parking");
-        
         setSize(600,600);
         setLocationRelativeTo(null);
         setLayout(null);
@@ -35,6 +35,12 @@ public class VentanaPrincipal_Vista extends JFrame{
         Image icn = new ImageIcon(getClass().getResource("../Imagenes/Car_Icon.png")).getImage();
         setIconImage(icn);
         setResizable(false);
+
+        //ImageIcon ImgLogo = new ImageIcon(getClass().getResource("../imagenes/YBSparking.png"));
+        ImageIcon ImgLogo = new ImageIcon(getClass().getResource("../imagenes/YBSparkingSinFondo.png"));
+        jlLogo = new JLabel(ImgLogo);
+        jlLogo.setBounds(100, 25, 400, 400);
+        add(jlLogo);
         
         VenatanaPrincipal_Control ctrl = new VenatanaPrincipal_Control(this);
         iniciarSesion(ctrl);// Boton mostrar ventana InicioSesion
