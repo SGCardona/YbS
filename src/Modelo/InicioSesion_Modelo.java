@@ -28,18 +28,26 @@ public class InicioSesion_Modelo implements DatosConexion{
                     for (int f = 0; f < registros.length; f++) {
                         for (int c = 0; c < registros[f].length; c++) {
                             //System.out.println(registros[f][c]+ "[" + f + "]" + "[" + c + "]");
-                             if (registros[f][0].equals(ini.jtUsuario.getText())){
-                                 if (registros[f][c].equals(String.valueOf(pass))){
+                            if(registros[f][0].equals(ini.jtUsuario.getText())){
+                                if(registros[f][c].equals(String.valueOf(pass))){
                                     validar = true;
                                     break;
                                 }
+                                else{
+                                    if(f == registros.length){
+                                        JOptionPane.showMessageDialog(null,"Contraseña incorrecta");
+                                        break;
+                                    }
+                                }
+                            }else{
+                                if(f == registros.length){
+                                    JOptionPane.showMessageDialog(null, "El nombre de usuario" + ini.jtUsuario.getText() + " no se encuentra registrado");
+                                    break;
+                                } 
                             }
                         }
                     }
                 }
-                if(!validar){
-                        JOptionPane.showMessageDialog(null, "Contraseña y nombre de usuario no coinciden");
-                    }
             }
         con.desconectar();
         return validar;

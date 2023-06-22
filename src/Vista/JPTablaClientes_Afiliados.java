@@ -8,14 +8,14 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.border.LineBorder;
 
-public class JPTablaClientes_Vehiculos extends JPanel{
+public class JPTablaClientes_Afiliados extends JPanel{
     
     public SubMenuListados_Vista sub;
     public JTable tablaCV;
     public ModeloTabla_Vista mt;
     public ListadoCliente_Modelo ls;
 
-    public JPTablaClientes_Vehiculos(SubMenuListados_Vista obj){
+    public JPTablaClientes_Afiliados(SubMenuListados_Vista obj){
         sub = obj;
         setBorder(new LineBorder(Color.RED));
 //        setBackground(Color.CYAN);
@@ -25,14 +25,15 @@ public class JPTablaClientes_Vehiculos extends JPanel{
         setVisible(false);
     }
     public void GUI(){
-        tablaCV();
+        tablaCA();
         ls = new ListadoCliente_Modelo(this);
-        ls.addRegistrosCV();
+        ls.addRegistrosA();
     }
-    public void tablaCV(){
+    public void tablaCA(){
         
-        String encabezados[] = {"Cedula","Apellido", "Nombre", "Telefono", "Vehiculo", "Placa", "Modelo", "Fecha Entrada", "Hora Entrada"};
-        String datos[][] = {{"", "", "", "", "", "",  "", "", ""}};
+        String encabezados[] = {"Placa","Dia Entrada", "Mes Entrada", "Year Entrada"
+                ,"Hora Entrada", "Dia Salida", "Mes Salida", "Year Salida", "Hora Salida", "Estado"};
+        String datos[][] = {{"", "", "", "", "", "",  "", "", "", ""}};
         mt = new ModeloTabla_Vista(datos, encabezados);
         tablaCV = new JTable(mt);
         

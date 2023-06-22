@@ -30,8 +30,8 @@ public class JPTablaClientes extends JPanel{
     }
     public void tablaC(){
         
-        String encabezados[] = {"Cedula", "Apellido", "Nombre", "Telefono"};
-        String datos[][] = {{"", "", "", ""}};
+        String encabezados[] = {"Cedula", "Apellido", "Nombre", "Telefono", "Estado"};
+        String datos[][] = {{"", "", "", "", ""}};
         mt = new ModeloTabla_Vista(datos, encabezados);
         tablaC = new JTable(mt);
         

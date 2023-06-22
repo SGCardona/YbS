@@ -1,7 +1,7 @@
 
 package Controlador;
 
-import Vista.IngresoVehiculo_Vista;
+import Vista.IngresoDatos_Vista;
 import Vista.MenuPrincipal_Vista;
 import Vista.SubMenuConsultas_Vista;
 import Vista.SubMenuListados_Vista;
@@ -19,7 +19,7 @@ public class MenuPrincipal_Control implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource().equals(mp.jbDatos)){
-            IngresoVehiculo_Vista ini = new IngresoVehiculo_Vista(mp);
+            IngresoDatos_Vista ini = new IngresoDatos_Vista(mp);
             mp.setVisible(false);
         }
         if(e.getSource().equals(mp.jbListados)){

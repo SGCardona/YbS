@@ -30,7 +30,7 @@ public class JPTablaVehiculos extends JPanel{
     }
     public void tablaV(){
         
-        String encabezados[] = {"Vehiculo", "Placa", "Modelo", "Fecha Entrada", "Hora Entrada"};
+        String encabezados[] = {"Cedula", "Placa", "Vehiculo", "Modelo", "Estado"};
         String datos[][] = {{"", "", "", "", ""}};
         mt = new ModeloTabla_Vista(datos, encabezados);
         tablaV = new JTable(mt);

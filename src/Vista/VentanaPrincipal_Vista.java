@@ -19,7 +19,7 @@ public class VentanaPrincipal_Vista extends JFrame{
     public ArrayList <String> listaVehiculo = new ArrayList<>();
     public ArrayList <String> listaUsuarios = new ArrayList<>();
     public JLabel jlLogo;
-    public ArrayList <String> listaClienteVehiculo = new ArrayList<>();
+    //public ArrayList <String> listaClienteVehiculo = new ArrayList<>();
 
 
     public VentanaPrincipal_Vista(){   

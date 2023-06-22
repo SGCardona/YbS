@@ -38,6 +38,7 @@ public class Conexion {
         if (!error) {
             try {
                 conn = DriverManager.getConnection("jdbc:mysql://" + host + ":3306/" + bd, login, password);
+
             } catch (SQLException ex) {
                 error = true;
                 JOptionPane.showMessageDialog(null,

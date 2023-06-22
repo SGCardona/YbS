@@ -1,7 +1,6 @@
 
 package Vista;
 
-import Controlador.IngresoVehiculo_Control;
 import java.awt.Color;
 import java.awt.Font;
 import javax.swing.BorderFactory;
@@ -15,13 +14,10 @@ public class JPIngCliente_Vista extends JPanel{
     
     public JTextField jtNombre, jtApellido, jtTelefono, jtCedula;
     public JLabel jlNombre, jlApellido, jlTelefono, jlCedula;
-    public IngresoVehiculo_Vista ivc;
+    public IngresoDatos_Vista iv;
     
-    
-    //public IngresoVehiculo_Control ivc;
-    
-    public JPIngCliente_Vista(IngresoVehiculo_Vista obj){
-        ivc = obj;
+    public JPIngCliente_Vista(IngresoDatos_Vista obj){
+        iv = obj;
         setBorder(new LineBorder(Color.WHITE));
         setBounds(40, 270, 510, 210);
         setBackground(Color.LIGHT_GRAY);

@@ -16,12 +16,12 @@ import javax.swing.border.TitledBorder;
 public class JPIngVehiculo_Vista extends JPanel{
     
     public JTextField jtPlaca, jtModelo;
-    public JLabel jlPlaca, jlModelo, jlTipo, jlFecha, jlHora, jl;
-    public JComboBox<String>  jcTipo, jcHora, jcMinutos;
+    public JLabel jlPlaca, jlModelo, jlTipo, jlFecha, jlHora, jl, jls;
+    public JComboBox<String>  jcTipo, jcHora, jcMinutos,jcHoraS, jcMinutoS;
     public JDateChooser JdEntrada, jdSalida;
-    public IngresoVehiculo_Vista iv;
+    public IngresoDatos_Vista iv;
     
-    public JPIngVehiculo_Vista(IngresoVehiculo_Vista obj){
+    public JPIngVehiculo_Vista(IngresoDatos_Vista obj){
         iv = obj;
         setBorder(new LineBorder(Color.BLACK));
         setBounds(40, 50, 510, 210);
@@ -39,7 +39,7 @@ public class JPIngVehiculo_Vista extends JPanel{
         modeloEntrada();
         tipoEntrada();
         fechaEntrada();
-        //fechaSalida();
+        fechaSalida();
     }
     
     public void placaEntrada(){
@@ -117,6 +117,28 @@ public class JPIngVehiculo_Vista extends JPanel{
         }
         jcMinutos.setBounds(388, 165, 48, 30);
         add(jcMinutos);
+
+    }
+    public void fechaSalida(){
+        jdSalida = new JDateChooser(new Date());
+        jdSalida.setBounds(110, 165, 100, 30);
+        add(jdSalida);
+        
+        jcHoraS = new JComboBox<>();
+        for(int i = 0; i < 24; i++){
+            if(i < 10) jcHoraS.addItem("0" + i);
+            else jcHoraS.addItem("" + i);
+        }
+        jcHoraS.setBounds(320, 165, 48, 30);
+        add(jcHoraS);
+        
+        jcMinutoS = new JComboBox<>();
+        for(int i = 0; i < 60; i++){
+            if(i < 10) jcMinutoS.addItem("0" + i);
+            else jcMinutoS.addItem("" + i);
+        }
+        jcMinutoS.setBounds(388, 165, 48, 30);
+        add(jcMinutoS);
 
     }
 }

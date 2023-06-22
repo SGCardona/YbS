@@ -16,7 +16,7 @@ public class SubMenuListados_Vista extends JFrame{
     public JPTablaUsuarios jpU;
     public JPTablaClientes jpC;
     public JPTablaVehiculos jpV;
-    public JPTablaClientes_Vehiculos jpCV;
+    public JPTablaClientes_Afiliados jpCV;
 
     public SubMenuListados_Vista(MenuPrincipal_Vista mp){
         super("Sub Menu Listas");
@@ -30,7 +30,7 @@ public class SubMenuListados_Vista extends JFrame{
         add(jpC);
         jpV = new JPTablaVehiculos(this);
         add(jpV);
-        jpCV = new JPTablaClientes_Vehiculos(this);
+        jpCV = new JPTablaClientes_Afiliados(this);
         add(jpCV);
         GUI();
         setVisible(true);
