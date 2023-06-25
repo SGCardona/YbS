@@ -67,7 +67,7 @@ public class SubMenuListados_Vista extends JFrame{
         add(jblistaV);
     }
     public void listaClienteVehiculo(SubMenuListados_Control obj){
-        jblistaCV = new JButton("Lista de Clientes y Vehiculos");
+        jblistaCV = new JButton("Registros");
         jblistaCV.setBounds(50, 170, 200, 30);
         jblistaCV.addActionListener(obj);
         add(jblistaCV);

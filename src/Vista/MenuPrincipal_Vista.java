@@ -12,7 +12,7 @@ public class MenuPrincipal_Vista extends JFrame{
     
     //public IngresoDatos_Vista ivv;
     public VentanaPrincipal_Vista vp;
-    public JButton jbDatos, jbListados, jbGraficas, jbConsulta, jbAcerca, jbSalida;
+    public JButton jbDatos, jbListados, jbGraficas, jbConsulta,jbGenerar, jbAcerca, jbSalida;
 
     public MenuPrincipal_Vista(VentanaPrincipal_Vista vp){
         super("Menu Principal");
@@ -37,6 +37,7 @@ public class MenuPrincipal_Vista extends JFrame{
         consultas(ctrl);
         graficas(ctrl);
         acerdaDe(ctrl);
+        generar(ctrl);
         salida(ctrl);
     }
     public void ingreso_datos(MenuPrincipal_Control obj){
@@ -63,9 +64,15 @@ public class MenuPrincipal_Vista extends JFrame{
         jbGraficas.addActionListener(obj);
         add(jbGraficas);
     }
+    public void generar(MenuPrincipal_Control obj){
+        jbGenerar = new JButton("Generar Reporte");
+        jbGenerar.setBounds(150, 250, 300, 30);
+        jbGenerar.addActionListener(obj);
+        add(jbGenerar);
+    }
     public void acerdaDe(MenuPrincipal_Control obj){
         jbAcerca = new JButton("Acerca de...");
-        jbAcerca.setBounds(150, 250, 300, 30);
+        jbAcerca.setBounds(150, 300, 300, 30);
         jbAcerca.addActionListener(obj);
         add(jbAcerca);
     }
