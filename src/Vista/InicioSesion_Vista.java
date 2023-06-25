@@ -9,6 +9,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.JToggleButton;
@@ -47,7 +48,7 @@ public class InicioSesion_Vista extends JFrame{
         InicioSesion_Control ctrl = new InicioSesion_Control(this);
         titulo();
         usuario();
-        passw();
+        passw(ctrl);
         iniciarSesion(ctrl);
         cancelar(ctrl); 
     }
@@ -88,7 +89,7 @@ public class InicioSesion_Vista extends JFrame{
         add(jtUsuario); 
     }
     
-    public void passw(){
+    public void passw(InicioSesion_Control obj){
         ver = new ImageIcon(getClass().getResource("../Imagenes/Ver_Icon.png"));
         no_ver = new ImageIcon(getClass().getResource("../Imagenes/NoVer_Icon.png"));
         
@@ -97,6 +98,7 @@ public class InicioSesion_Vista extends JFrame{
         tVer.setBorderPainted(false);
         tVer.setContentAreaFilled(false);
         tVer.setFocusPainted(false);
+        tVer.addActionListener(obj);
         add(tVer);
         
         jlPass = new JLabel("Password");
@@ -113,6 +115,7 @@ public class InicioSesion_Vista extends JFrame{
     
     public static void main(String[] args) {
         InicioSesion_Vista is = new InicioSesion_Vista(null);
+       
     }
     
 }

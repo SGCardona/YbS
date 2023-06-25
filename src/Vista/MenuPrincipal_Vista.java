@@ -7,11 +7,10 @@ import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 
 public class MenuPrincipal_Vista extends JFrame{
     
-    public IngresoDatos_Vista ivv;
+    //public IngresoDatos_Vista ivv;
     public VentanaPrincipal_Vista vp;
     public JButton jbDatos, jbListados, jbGraficas, jbConsulta, jbAcerca, jbSalida;
 

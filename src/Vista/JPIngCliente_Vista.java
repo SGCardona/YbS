@@ -19,10 +19,10 @@ public class JPIngCliente_Vista extends JPanel{
     public JPIngCliente_Vista(IngresoDatos_Vista obj){
         iv = obj;
         setBorder(new LineBorder(Color.WHITE));
-        setBounds(40, 270, 510, 210);
+        setBounds(300, 270, 510, 210);
         setBackground(Color.LIGHT_GRAY);
         setOpaque(false);
-        TitledBorder border = BorderFactory.createTitledBorder(BorderFactory.createLineBorder(Color.WHITE), "Datos del vehiculo");
+        TitledBorder border = BorderFactory.createTitledBorder(BorderFactory.createLineBorder(Color.WHITE), "Datos del Cliente");
         border.setTitleColor(Color.WHITE);
         setBorder(border);
         setLayout(null);
@@ -38,51 +38,51 @@ public class JPIngCliente_Vista extends JPanel{
     }
     
     public void nombre(){
-        jlNombre = new JLabel("Nombre");
-        jlNombre.setBounds(80, 5, 200, 50);
+        jlNombre = new JLabel("Nombre: ");
+        jlNombre.setBounds(80, 5, 150, 50);
         jlNombre.setFont(new Font("Tahoma", Font.BOLD, 18));
         jlNombre.setForeground(Color.WHITE);
         add(jlNombre);
         
         jtNombre = new JTextField();
-        jtNombre.setBounds(280, 15, 170, 30);
+        jtNombre.setBounds(200, 15, 250, 30);
         add(jtNombre);
     }
     
     public void apellido(){
-        jlApellido = new JLabel("Apellido");
-        jlApellido.setBounds(80, 55, 200, 50);
+        jlApellido = new JLabel("Apellido: ");
+        jlApellido.setBounds(80, 65, 150, 30);
         jlApellido.setFont(new Font("Tahoma", Font.BOLD, 18));
         jlApellido.setForeground(Color.WHITE);
         add(jlApellido);
         
         jtApellido = new JTextField();
-        jtApellido.setBounds(280, 65, 170, 30);
+        jtApellido.setBounds(200, 65, 250, 30);
         add(jtApellido);
     }
     
     public void telefono(){
-        jlTelefono = new JLabel("Telefono");
-        jlTelefono.setBounds(80, 115, 200, 30);
+        jlTelefono = new JLabel("Telefono: ");
+        jlTelefono.setBounds(80, 115, 150, 30);
         jlTelefono.setFont(new Font("Tahoma", Font.BOLD, 18));
         jlTelefono.setForeground(Color.WHITE);
         add(jlTelefono);
         
         jtTelefono = new JTextField();
-        jtTelefono.setBounds(280, 115, 170, 30);
+        jtTelefono.setBounds(200, 115, 250, 30);
         add(jtTelefono);
         
     }
     
     public void cedula(){
-        jlCedula = new JLabel("Cedula");
-        jlCedula.setBounds(80, 165, 200, 30);
+        jlCedula = new JLabel("Cedula: ");
+        jlCedula.setBounds(80, 165, 150, 30);
         jlCedula.setFont(new Font("Tahoma", Font.BOLD, 18));
         jlCedula.setForeground(Color.WHITE);
         add(jlCedula);
         
         jtCedula = new JTextField();
-        jtCedula.setBounds(280, 165, 170, 30);
+        jtCedula.setBounds(200, 165, 250, 30);
         add(jtCedula);
     }
 }

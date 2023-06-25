@@ -17,6 +17,15 @@ public class InicioSesion_Control implements ActionListener{
     
     @Override
     public void actionPerformed(ActionEvent e) {
+        if(e.getSource().equals(ini.tVer)){
+            if(ini.tVer.getIcon().equals(ini.no_ver)){
+                ini.tVer.setIcon(ini.ver);
+                ini.jpPass.setEchoChar((char) 0);
+            }else{
+                ini.tVer.setIcon(ini.no_ver);
+                ini.jpPass.setEchoChar('*');
+            }ini.jpPass.requestFocus();    
+        }
         if(e.getSource().equals(ini.jbIniciar)){
             InicioSesion_Modelo inm = new InicioSesion_Modelo(ini);
             boolean validar = inm.iniciarSesion();
@@ -26,6 +35,7 @@ public class InicioSesion_Control implements ActionListener{
             }
         }
         if(e.getSource().equals(ini.jbCancelar)){
+            
             ini.setVisible(false);
             ini.dispose();
             ini.vp.setVisible(true);

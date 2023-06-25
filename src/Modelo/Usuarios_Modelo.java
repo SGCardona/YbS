@@ -11,7 +11,8 @@ public class Usuarios_Modelo implements DatosConexion{
     public Usuarios_Modelo(CrearUsuario_Vista obj) {
         cu = obj;
     }
-    public void guardarUsuario(){
+    public boolean guardarUsuario(){
+        boolean error = false;
         if(!validar()){
             cu.vp.listaUsuarios.add(cu.jtNombre.getText());
             char contra[] = cu.jpContraseña.getPassword();
@@ -21,14 +22,16 @@ public class Usuarios_Modelo implements DatosConexion{
             cu.vp.listaUsuarios.add((String) cu.jcRol.getSelectedItem());
             cu.vp.listaUsuarios.add("");
             Conexion con = new Conexion();
-            boolean error = con.conectarMySQL(baseDatos, user, login, host);
+            error = con.conectarMySQL(baseDatos, user, login, host);
             if(!error){
                 error = con.insertar("usuarios",cu.vp.listaUsuarios);
                 con.desconectar();
             }
         }else{
             JOptionPane.showMessageDialog(null, "El nombre de usuario ya existe");
-        }    
+        }
+        
+        return error;
     }
     public boolean validar(){
         boolean validar = false;

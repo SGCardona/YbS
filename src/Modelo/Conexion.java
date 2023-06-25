@@ -291,15 +291,14 @@ public class Conexion {
                         }
                         f++;
                     }
-                }else{
-                    JOptionPane.showMessageDialog(null, "No hay registros que cumplan con la condición");
                 }
-                
                 cerrarConsulta();
             } catch (SQLException sqle) {
                 JOptionPane.showMessageDialog(null,
-                        "Error al tratar de consultar la tabla.\n\n"
-                        + "SQL Error: " + sqle.getMessage(),
+                        """
+                        Error al tratar de consultar la tabla.
+
+                        SQL Error: """ + sqle.getMessage(),
                         "Error de consulta",
                         JOptionPane.ERROR_MESSAGE);
             }
