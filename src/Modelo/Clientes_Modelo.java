@@ -17,35 +17,49 @@ public class Clientes_Modelo {
     public Clientes_Modelo(IngresoDatos_Vista obj) {
         cl = obj;
     }
-    public void gCliente(){//Guardar datos de cliente en la base de datos
+    public boolean gCliente(){//Guardar datos de cliente en la base de datos
+        boolean val = false;
         //-------------------- Extraccion datos de cliente ------------------------//
-        cl.ing.mp.vp.listaCliente.add(cl.inc.jtCedula.getText());
-        cl.ing.mp.vp.listaCliente.add(cl.inc.jtApellido.getText());
-        cl.ing.mp.vp.listaCliente.add(cl.inc.jtNombre.getText());
-        cl.ing.mp.vp.listaCliente.add(cl.inc.jtTelefono.getText());
-        cl.ing.mp.vp.listaCliente.add("1");//Estado 1 -> Adentro o 0 -> Afuera
-        //------------- Conexion e ingreso de datos a la base ------------------//
-        Conexion con = new Conexion();
-        boolean error = con.conectarMySQL(baseDatos, user, login, host);
-        if(!error){
-            con.insertar("cliente",cl.ing.mp.vp.listaCliente);
-            con.desconectar();
+        if(filtrar("cliente", "nombre", "cedula = " + cl.inc.jtCedula.getText()).equals("")){
+            cl.ing.mp.vp.listaCliente.add(cl.inc.jtCedula.getText());
+            cl.ing.mp.vp.listaCliente.add(cl.inc.jtApellido.getText());
+            cl.ing.mp.vp.listaCliente.add(cl.inc.jtNombre.getText());
+            cl.ing.mp.vp.listaCliente.add(cl.inc.jtTelefono.getText());
+            cl.ing.mp.vp.listaCliente.add("1");//Estado 1 -> Adentro o 0 -> Afuera
+            //------------- Conexion e ingreso de datos a la base ------------------//
+            Conexion con = new Conexion();
+            boolean error = con.conectarMySQL(baseDatos, user, login, host);
+            if(!error){
+                con.insertar("cliente",cl.ing.mp.vp.listaCliente);
+                con.desconectar();
+            }
+            val = true;
+        }else{
+            JOptionPane.showMessageDialog(null, "El cliente con cedula "+ cl.inc.jtCedula.getText() +" ya esta registrado");
         }
+        return val;
     }
-    public void gVehiculo(){//Guardar datos del vehiculo en la base de datos
+    public boolean gVehiculo(){//Guardar datos del vehiculo en la base de datos
+        boolean val = false;
         //-------------------- Extraccion datos de vehiculo -----------------------//
-        cl.ing.mp.vp.listaVehiculo.add(cl.inc.jtCedula.getText());
-        cl.ing.mp.vp.listaVehiculo.add(cl.inv.jtPlaca.getText());
-        cl.ing.mp.vp.listaVehiculo.add((String) cl.inv.jcTipo.getSelectedItem());
-        cl.ing.mp.vp.listaVehiculo.add(cl.inv.jtModelo.getText());
-        cl.ing.mp.vp.listaVehiculo.add("1");//Estado 1 -> Adentro o 0 -> Afuera
-        //------------- Conexion e ingreso de datos a la base ------------------//
-        Conexion con = new Conexion();
-        boolean error = con.conectarMySQL(baseDatos, user, login, host);
-        if(!error){
-            con.insertar("vehiculo",cl.ing.mp.vp.listaVehiculo);
-            con.desconectar();
+        if(filtrar("vehiculo", "placa", "cedula = " + cl.inc.jtCedula.getText()).equals("")){
+            cl.ing.mp.vp.listaVehiculo.add(cl.inc.jtCedula.getText());
+            cl.ing.mp.vp.listaVehiculo.add(cl.inv.jtPlaca.getText());
+            cl.ing.mp.vp.listaVehiculo.add((String) cl.inv.jcTipo.getSelectedItem());
+            cl.ing.mp.vp.listaVehiculo.add(cl.inv.jtModelo.getText());
+            cl.ing.mp.vp.listaVehiculo.add("1");//Estado 1 -> Adentro o 0 -> Afuera
+            //------------- Conexion e ingreso de datos a la base ------------------//
+            Conexion con = new Conexion();
+            boolean error = con.conectarMySQL(baseDatos, user, login, host);
+            if(!error){
+                con.insertar("vehiculo",cl.ing.mp.vp.listaVehiculo);
+                con.desconectar();
+            }
+            val = true;
+        }else{
+            JOptionPane.showMessageDialog(null, "El vehiculo con placa "+ cl.inv.jtPlaca.getText() +"ya esta registrado");
         }
+        return val;   
     }
     public void gAfiliado(){//Guardar datos de vehiculos afiliados
         //-------------------- Extraccion datos de vehiculo -----------------------//
@@ -136,6 +150,38 @@ public class Clientes_Modelo {
             }
         con.desconectar();
         return cedula;
+    }
+    public boolean espacioB(){
+        boolean val = true;
+        if(cl.inc.jtNombre.getText().equals("")){
+            val = false;
+            JOptionPane.showMessageDialog(null, "Falta por digitar el nombre");
+        }
+        if(cl.inc.jtApellido.getText().equals("")){
+            val = false;
+            JOptionPane.showMessageDialog(null, "Falta por digitar el apellido");
+        }
+        if(cl.inc.jtTelefono.getText().equals("")){
+            val = false;
+            JOptionPane.showMessageDialog(null, "Falta por digitar el telefono");
+        }
+        if(cl.inc.jtCedula.getText().equals("")){
+            val = false;
+            JOptionPane.showMessageDialog(null, "Falta por digitar la cedula");
+        }
+        if(cl.inv.jtPlaca.getText().equals("")){
+            val = false;
+            JOptionPane.showMessageDialog(null, "Falta por digitar el numero de placa");
+        }
+        if(cl.inv.jtModelo.getText().equals("")){
+            val = false;
+            JOptionPane.showMessageDialog(null, "Falta por digitar el nombre");
+        }
+        if(cl.inv.jcTipo.getSelectedItem() == null){
+            val = false;
+            JOptionPane.showMessageDialog(null, "Falto la eleccion del tipo de vehiculo");
+        }
+        return val;
     }
     
     public static void main(String[] args) {

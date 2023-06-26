@@ -21,6 +21,11 @@ public class SubMenuIngreso_Control implements ActionListener{
             IngresoDatos_Vista ingv = new IngresoDatos_Vista(ing);
             ing.setVisible(false);
         }
+        if(e.getSource().equals(ing.jbSalir)){
+            ing.setVisible(false);
+            ing.dispose();
+            ing.mp.setVisible(true);
+        }
     }
     
     

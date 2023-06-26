@@ -10,12 +10,11 @@ import javax.swing.JFrame;
 
 public class SubMenuIngreso_Vista extends JFrame{
     
-    //public IngresoDatos_Vista ivv;
     public MenuPrincipal_Vista mp;
-    public JButton jbAfiliados;
+    public JButton jbAfiliados, jbSalir;
 
     public SubMenuIngreso_Vista(MenuPrincipal_Vista obj){
-        super("Menu Principal");
+        super("Sub-Menu Ingreso de datos");
         mp = obj;
         setSize(500,400);
         setLocationRelativeTo(null);
@@ -32,12 +31,19 @@ public class SubMenuIngreso_Vista extends JFrame{
         
         SubMenuIngreso_Control ctrl = new SubMenuIngreso_Control(this);
         afiliados(ctrl);
+        salida(ctrl);
     }
     public void afiliados(SubMenuIngreso_Control obj){
         jbAfiliados = new JButton("Afiliados");
         jbAfiliados.setBounds(100, 50, 300, 30);
         jbAfiliados.addActionListener(obj);
         add(jbAfiliados);
+    }
+    public void salida(SubMenuIngreso_Control obj){
+        jbSalir = new JButton("Volver al menu principal");
+        jbSalir.setBounds(100, 300, 300, 30);
+        jbSalir.addActionListener(obj);
+        add(jbSalir);
     }
     public static void main(String[] args) {
         SubMenuIngreso_Vista sub = new SubMenuIngreso_Vista(null);
