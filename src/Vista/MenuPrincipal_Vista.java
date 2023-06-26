@@ -10,14 +10,13 @@ import javax.swing.JFrame;
 
 public class MenuPrincipal_Vista extends JFrame{
     
-    //public IngresoDatos_Vista ivv;
     public VentanaPrincipal_Vista vp;
-    public JButton jbDatos, jbListados, jbGraficas, jbConsulta,jbGenerar, jbAcerca, jbSalida;
+    public JButton jbDatos, jbListados, jbGraficas, jbConsulta, jbGenerar, jbCorreo, jbAcerca, jbSalida;
 
     public MenuPrincipal_Vista(VentanaPrincipal_Vista vp){
         super("Menu Principal");
         this.vp = vp;
-        setSize(600,400);
+        setSize(600,470);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(null);
@@ -38,6 +37,7 @@ public class MenuPrincipal_Vista extends JFrame{
         graficas(ctrl);
         acerdaDe(ctrl);
         generar(ctrl);
+        Correo(ctrl);
         salida(ctrl);
     }
     public void ingreso_datos(MenuPrincipal_Control obj){
@@ -70,9 +70,15 @@ public class MenuPrincipal_Vista extends JFrame{
         jbGenerar.addActionListener(obj);
         add(jbGenerar);
     }
+    public void Correo(MenuPrincipal_Control obj){
+        jbCorreo = new JButton("Enviar Correo");
+        jbCorreo.setBounds(150, 300, 300, 30);
+        jbCorreo.addActionListener(obj);
+        add(jbCorreo);
+    }
     public void acerdaDe(MenuPrincipal_Control obj){
         jbAcerca = new JButton("Acerca de...");
-        jbAcerca.setBounds(150, 300, 300, 30);
+        jbAcerca.setBounds(150, 350, 300, 30);
         jbAcerca.addActionListener(obj);
         add(jbAcerca);
     }

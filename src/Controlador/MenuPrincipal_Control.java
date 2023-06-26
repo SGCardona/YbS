@@ -2,6 +2,7 @@
 package Controlador;
 
 import Modelo.Pdf;
+import Vista.Correo_Vista;
 import Vista.MenuPrincipal_Vista;
 import Vista.SubMenuConsultas_Vista;
 import Vista.SubMenuIngreso_Vista;
@@ -34,6 +35,10 @@ public class MenuPrincipal_Control implements ActionListener{
         if(e.getSource().equals(mp.jbGenerar)){
             Pdf pd = new Pdf(mp);
             pd.generar("afiliado");
+        }
+        if(e.getSource().equals(mp.jbCorreo)){
+            Correo_Vista Co = new Correo_Vista(mp);
+            mp.setVisible(false);
         }
         if(e.getSource().equals(mp.jbSalida)){
             mp.setVisible(false);

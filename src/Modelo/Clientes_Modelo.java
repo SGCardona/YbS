@@ -42,7 +42,8 @@ public class Clientes_Modelo {
     public boolean gVehiculo(){//Guardar datos del vehiculo en la base de datos
         boolean val = false;
         //-------------------- Extraccion datos de vehiculo -----------------------//
-        if(filtrar("vehiculo", "placa", "cedula = " + cl.inc.jtCedula.getText()).equals("")){
+        String placa = filtrar("vehiculo", "placa", "placa = " + cl.inv.jtPlaca.getText());
+        if(placa.equals("")){
             cl.ing.mp.vp.listaVehiculo.add(cl.inc.jtCedula.getText());
             cl.ing.mp.vp.listaVehiculo.add(cl.inv.jtPlaca.getText());
             cl.ing.mp.vp.listaVehiculo.add((String) cl.inv.jcTipo.getSelectedItem());
